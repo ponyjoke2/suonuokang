@@ -1,0 +1,6 @@
+F:\vsProject\通信\通信服务端\bin\Debug\通信服务端.exe.config
+F:\vsProject\通信\通信服务端\bin\Debug\通信服务端.exe
+F:\vsProject\通信\通信服务端\bin\Debug\通信服务端.pdb
+F:\vsProject\通信\通信服务端\obj\Debug\通信服务端.csproj.CoreCompileInputs.cache
+F:\vsProject\通信\通信服务端\obj\Debug\通信服务端.exe
+F:\vsProject\通信\通信服务端\obj\Debug\通信服务端.pdb

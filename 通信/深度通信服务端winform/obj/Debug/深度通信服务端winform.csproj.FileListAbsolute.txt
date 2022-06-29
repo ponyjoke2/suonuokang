@@ -1,0 +1,10 @@
+F:\vsProject\通信\深度通信服务端winform\bin\Debug\深度通信服务端winform.exe.config
+F:\vsProject\通信\深度通信服务端winform\bin\Debug\深度通信服务端winform.exe
+F:\vsProject\通信\深度通信服务端winform\bin\Debug\深度通信服务端winform.pdb
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.csproj.AssemblyReference.cache
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.Form1.resources
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.Properties.Resources.resources
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.csproj.GenerateResource.cache
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.csproj.CoreCompileInputs.cache
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.exe
+F:\vsProject\通信\深度通信服务端winform\obj\Debug\深度通信服务端winform.pdb

@@ -1,0 +1,558 @@
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csprojAssemblyReference.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\examination.json
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\WlanNative.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\examination.json
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\WlanNative.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csprojAssemblyReference.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\examination.json
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\WlanNative.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csprojAssemblyReference.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\examination.json
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\WlanNative.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\CyUSB.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MainWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\examination.json
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\WlanNative.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\CyUSB.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\MainWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\examination.json
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\WlanNative.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\CyUSB.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MainWindow.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+F:\vsProject\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\examination.json
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\WlanNative.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\CyUSB.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MainWindow.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\超声UL3C新版测试\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\examination.json
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\WlanNative.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\CyUSB.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\MainWindow.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第一版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\examination.json
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\Panuon.UI.Silver.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\WlanNative.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\CyUSB.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.AssemblyReference.cache
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Themes\Generic.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Themes\SonoptekColor.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Themes\SonoptekSlider.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.cache
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_View_MarkupCompile.lref
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Controls\BulletCheckBox.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Controls\SonoptekControls.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\MainWindow.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USMainPages\UltrasoundPage.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USBMViewer.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USEnhanceViewer.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWinNoProcess.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\LoadingWin.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\PresetWindow.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USWindows\TipsWin.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\USViewers\USGeneralView.baml
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.g.resources
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.resources
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.zh-TW.resources
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.Properties.Resources.en-US.resources
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.GenerateResource.cache
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.Fody.CopyLocal.cache
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_CS.csproj.CopyComplete
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第二版\SmartUSKit_CS\obj\Debug\SmartUSKit_View.pdb

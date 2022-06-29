@@ -1,0 +1,20 @@
+{
+  "yesterday": "2021915",
+  "UL-3C_ENH_COMPOUND": "True",
+  "UL-3C_ENH_HARMONIC": "True",
+  "UL-3C_ENH_DYNAMIC_RANGE": "80",
+  "UL-3C_ENH_FOCUS_POS": "1",
+  "UL-3C_ENH_ENHANCE_LEVEL": "4",
+  "UL-3C_ENH_VGAIN_0": "146",
+  "UL-3C_ENH_VGAIN_1": "127",
+  "UL-3C_ENH_VGAIN_2": "127",
+  "UL-3C_ENH_VGAIN_3": "127",
+  "UL-3C_ENH_VGAIN_4": "127",
+  "UL-3C_ENH_VGAIN_5": "127",
+  "UL-3C_ENH_VGAIN_6": "127",
+  "UL-3C_ENH_VGAIN_7": "127",
+  "UL-3C_GAIN": "81",
+  "UL-3C_ZOOM": "0",
+  "BIOPSY_MODE": "0",
+  "language": "0"
+}

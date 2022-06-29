@@ -1,0 +1,324 @@
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\examination.json
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\WirelessUSG.exe
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\WirelessUSG.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csprojAssemblyReference.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\App.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\App.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.exe
+D:\桌面\超声项目\新建文件夹\发布\UL-3C 1.0.0\WirelessUSG\obj\Debug\WirelessUSG.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\examination.json
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\WirelessUSG.exe
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\WirelessUSG.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csprojAssemblyReference.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\App.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\App.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.exe
+D:\桌面\超声项目\新建文件夹\发布\UL-3C1.0.0\WirelessUSG\obj\Debug\WirelessUSG.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\examination.json
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.exe
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\CyUSB.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\ManagedWifi.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\System.ValueTuple.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSControls.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\System.ValueTuple.xml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csprojAssemblyReference.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\MainWindow.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\App.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\App.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\MainWindow.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.exe
+D:\桌面\超声项目\深圳大学\深圳大学源码\发布\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.pdb
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\examination.json
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.exe
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\WirelessUSG.pdb
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\CyUSB.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\App.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\App.baml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\MainWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.exe
+E:\SHENZHEN\深圳大学源码UL3C\WirelessUSG\obj\Debug\WirelessUSG.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\examination.json
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\WirelessUSG.exe
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\WirelessUSG.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\CyUSB.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\App.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\App.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\MainWindow.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.exe
+E:\SHENZHEN\深圳大学源码UL3C测试版\WirelessUSG\obj\Debug\WirelessUSG.pdb
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\examination.json
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.exe
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.pdb
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\CyUSB.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\ManagedWifi.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\System.ValueTuple.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSControls.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit.pdb
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\System.ValueTuple.xml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\MainWindow.g.cs
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\App.g.cs
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\App.baml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\MainWindow.baml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.exe
+F:\vsProject\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.pdb
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\examination.json
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.exe
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\WirelessUSG.pdb
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\CyUSB.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\App.g.cs
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\App.baml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\MainWindow.baml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.exe
+E:\SHENZHEN\超声UL3C新版测试\WirelessUSG\obj\Debug\WirelessUSG.pdb
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\examination.json
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\WirelessUSG.exe
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\WirelessUSG.pdb
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\CyUSB.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\App.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\App.baml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\MainWindow.baml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.exe
+E:\SHENZHEN\索诺康UL3C第一版\WirelessUSG\obj\Debug\WirelessUSG.pdb
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\examination.json
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\WirelessUSG.exe.config
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\WirelessUSG.exe
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\WirelessUSG.pdb
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\ShaderEffectLibrary.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSKit.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSKit_View.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\CyUSB.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\Newtonsoft.Json.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\ManagedWifi.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\System.ValueTuple.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSControls.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSKit.pdb
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSKit_View.pdb
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\SmartUSKit_View.dll.config
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\Newtonsoft.Json.xml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\System.ValueTuple.xml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\en-US\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\bin\Debug\zh-TW\SmartUSKit_View.resources.dll
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.csproj.AssemblyReference.cache
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\MainWindow.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\App.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG_Content.g.cs
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.cache
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG_MarkupCompile.lref
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\App.baml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\MainWindow.baml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\Resources\Language\EN.baml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\Resources\Language\ZH.baml
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.g.resources
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.Properties.Resources.resources
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.csproj.GenerateResource.cache
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.csproj.CopyComplete
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.exe
+E:\SHENZHEN\索诺康UL3C第二版\WirelessUSG\obj\Debug\WirelessUSG.pdb
