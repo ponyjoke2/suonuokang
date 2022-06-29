@@ -1,0 +1,297 @@
+﻿<Window
+    x:Class="SmartUSKit_CS.USWindows.PresetWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:controls="clr-namespace:SmartUSKit_CS.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SmartUSKit_CS" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:smartUSControls="clr-namespace:SmartUSControls.USControls;assembly=SmartUSControls"
+    Name="thiswindow" Title="Preset" Width="500"
+    Height="400" AllowsTransparency="True" Background="Transparent"
+    Loaded="Window_Loaded" RenderTransformOrigin="0.5,0.5" ResizeMode="NoResize"
+    WindowStyle="None" mc:Ignorable="d">
+    <Window.Resources>
+        <System:Double x:Key="fontsize">18</System:Double>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="FontWeight" Value="Black" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            Name="border"
+                            BorderBrush="{TemplateBinding Control.BorderBrush}"
+                            BorderThickness="1" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Stretch" Content="{TemplateBinding ContentControl.Content}" />
+                            <!--<ContentPresenter Content="  -" HorizontalAlignment="Center"  VerticalAlignment="Stretch" Margin="-1.333,-0.333,-0.667,0.333" Width="36"/>-->
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="border" Property="BorderThickness" Value="2" />
+                            </Trigger>
+                            <!--<Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource ButtonBorder}"/>
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="false">
+                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource ButtonBorder}"/>-->
+                                <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Storyboard x:Key="HideWindow">
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetProperty="Opacity" From="1"
+                To="0" Duration="0:0:0.1" />
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetName="thiswindow" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleX)"
+                From="1" To="0.6" Duration="0:0:0.1" />
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetName="thiswindow" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleY)"
+                From="1" To="0.6" Duration="0:0:0.1" />
+        </Storyboard>
+        <Storyboard x:Key="ShowWindow">
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetProperty="Opacity" From="0"
+                To="1" Duration="0:0:0.1" />
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetName="thiswindow" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleX)"
+                From="0.6" To="1" Duration="0:0:0.1" />
+            <DoubleAnimation
+                FillBehavior="Stop" Storyboard.TargetName="thiswindow" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleY)"
+                From="0.6" To="1" Duration="0:0:0.1" />
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard Storyboard="{StaticResource ShowWindow}" />
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1" />
+            <SkewTransform />
+            <RotateTransform />
+            <TranslateTransform />
+        </TransformGroup>
+    </Window.RenderTransform>
+    <Border
+        Background="Azure" BorderBrush="Gray" BorderThickness="1"
+        CornerRadius="6">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="4.5*" />
+            </Grid.RowDefinitions>
+            <Label
+                x:Name="SettingsLabel" HorizontalAlignment="Center" VerticalAlignment="Top"
+                Content="设置" FontSize="21" />
+            <smartUSControls:USButton
+                x:Name="btnClose" Margin="0,0,3,0" Padding="4,0,4,0"
+                HorizontalAlignment="Right" VerticalAlignment="Center" Background="Azure"
+                BorderBrush="Transparent" BorderCornerRadius="4" ButtonStyle="General"
+                Click="Button_Click" ClickStyle="Sink" Content="关闭"
+                CoverBrush="#FF50F5DC" Cursor="Hand"
+                FontSize="{StaticResource fontsize}"
+                Foreground="Blue" />
+            <Line
+                Grid.Row="0" VerticalAlignment="Bottom" Stroke="Black"
+                X1="0" X2="800" Y1="0"
+                Y2="0" />
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Grid.Column="0" Height="37" Margin="10,0,0,0"
+                    HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label
+                    x:Name="ShowInfoLabel" Grid.Column="0" Margin="10,0,0,0"
+                    HorizontalAlignment="Left" VerticalAlignment="Center" Content="显示信息："
+                    FontSize="{DynamicResource fontsize}" />
+                <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!--<controls:BulletCheckBox Text="隐藏" x:Name="IsShowimformationChb" CheckedText="显示" IsChecked="True" Height="24" Width="60" VerticalAlignment="Center"  Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked"/>-->
+                    <controls:BulletCheckBox
+                        x:Name="IsShowimformationChb" Width="60" Height="24"
+                        VerticalAlignment="Center" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked" />
+                    <!--<CheckBox Visibility="Hidden" x:Name="IsShowimformationChb"  Background="Gainsboro" Focusable="False" HorizontalContentAlignment="Left"  VerticalContentAlignment="Center" Content="ON" HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Top" FontSize="{StaticResource fontsize}" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked"  />-->
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Label
+                        x:Name="languageLabel" Grid.Row="1" HorizontalAlignment="Left"
+                        VerticalAlignment="Center" Content="语言:"
+                        FontSize="{DynamicResource fontsize}" />
+                    <smartUSControls:USComboBox
+                        x:Name="LanguageComboBox" Grid.Row="1" Width="100"
+                        HorizontalAlignment="Left" VerticalAlignment="Center" BorderCornerRadius="2"
+                        Cursor="Hand" Focusable="False"
+                        FontSize="{DynamicResource fontsize}"
+                        SelectionChanged="ComboBox_SelectionChanged">
+                        <!--<Label x:Name="ChineseLabel" Content="中文" FontSize="{DynamicResource fontsize}"/>
+                        <Label x:Name="TraChineseLabel" Content="繁體中文" FontSize="{DynamicResource fontsize}"/>
+                        <Label x:Name="EnglishLabel" Content="English" FontSize="{DynamicResource fontsize}"/>-->
+                        <smartUSControls:USComboBoxItem x:Name="ChineseLabel" Cursor="Hand" Value="#88F4A758">
+                            <smartUSControls:USComboBoxItem.Content>
+                                <Grid>
+                                    <TextBlock
+                                        Margin="4,0,0,0" VerticalAlignment="Center" Foreground="Black"
+                                        Text="中文" />
+                                </Grid>
+                            </smartUSControls:USComboBoxItem.Content>
+                        </smartUSControls:USComboBoxItem>
+                        <smartUSControls:USComboBoxItem x:Name="TraChineseLabel" Cursor="Hand" Value="#88F4A758">
+                            <smartUSControls:USComboBoxItem.Content>
+                                <Grid>
+                                    <TextBlock
+                                        Margin="4,0,0,0" VerticalAlignment="Center" Foreground="Black"
+                                        Text="繁体" />
+                                </Grid>
+                            </smartUSControls:USComboBoxItem.Content>
+                        </smartUSControls:USComboBoxItem>
+                        <smartUSControls:USComboBoxItem x:Name="EnglishLabel" Cursor="Hand" Value="#88F4A758">
+                            <smartUSControls:USComboBoxItem.Content>
+                                <Grid>
+                                    <TextBlock
+                                        Margin="4,0,0,0" VerticalAlignment="Center" Foreground="Black"
+                                        Text="English" />
+                                </Grid>
+                            </smartUSControls:USComboBoxItem.Content>
+                        </smartUSControls:USComboBoxItem>
+                    </smartUSControls:USComboBox>
+                </StackPanel>
+            </Grid>
+
+            <Line
+                Grid.Row="1" VerticalAlignment="Bottom" Stroke="Black"
+                X1="0" X2="800" Y1="0"
+                Y2="0" />
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <Label
+                        x:Name="ReplayFrames" Grid.Column="0" HorizontalAlignment="Left"
+                        VerticalAlignment="Center" Content="回放帧数："
+                        FontSize="{DynamicResource fontsize}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left"
+                    VerticalAlignment="Center" Orientation="Horizontal">
+
+                    <smartUSControls:USButton
+                        x:Name="btnSub" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Background="Azure" BorderBrush="Blue" BorderCornerRadius="4"
+                        BorderThickness="2" ButtonStyle="General" Click="BtnSub_Click"
+                        ClickStyle="Sink" CoverBrush="#FF50F5DC" Cursor="Hand"
+                        Focusable="False" FontSize="20" Foreground="Blue">
+                        ➖
+                    </smartUSControls:USButton>
+                    <Label
+                        x:Name="txtNum" HorizontalAlignment="Left" VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="100"
+                        FontSize="{DynamicResource fontsize}" />
+                    <smartUSControls:USButton
+                        x:Name="btnAdd" HorizontalAlignment="Left" VerticalAlignment="Center"
+                        Background="Azure" BorderBrush="Blue" BorderCornerRadius="4"
+                        BorderThickness="2" ButtonStyle="General" Click="BtnAdd_Click"
+                        ClickStyle="Sink" Content="➕" CoverBrush="#FF50F5DC"
+                        Cursor="Hand" Focusable="False" FontSize="20"
+                        Foreground="Blue" />
+                </StackPanel>
+
+            </Grid>
+
+            <Line
+                Grid.Row="2" VerticalAlignment="Bottom" Stroke="Black"
+                X1="0" X2="800" Y1="0"
+                Y2="0" />
+
+            <StackPanel
+                Grid.Row="3" Margin="10,0,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Orientation="Horizontal">
+                <Label
+                    x:Name="wifichannelLabel" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Content="无线信道"
+                    FontSize="{DynamicResource fontsize}" />
+                <Label
+                    x:Name="channelLabel" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Content="--"
+                    FontSize="{DynamicResource fontsize}" />
+            </StackPanel>
+
+            <Line
+                Grid.Row="3" VerticalAlignment="Bottom" Stroke="Black"
+                X1="0" X2="800" Y1="0"
+                Y2="0" />
+
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="28" />
+                    </Grid.RowDefinitions>
+                    <ListBox
+                        x:Name="ls" Width="280" HorizontalAlignment="Left"
+                        VerticalAlignment="Top" VerticalContentAlignment="Top" Background="Azure"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListBox_SelectionChanged">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" TextBlock.Foreground="{TemplateBinding Foreground}" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <Setter Property="Background" Value="Red" />
+                                        <!--<Setter Property="Foreground" Value="White"/>-->
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Background" Value="LightGreen" />
+                                        <!--<Setter Property="Foreground" Value="Red"/>-->
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+                    <smartUSControls:USButton
+                        x:Name="btnSelect" Grid.Row="1" Padding="4,0,4,0"
+                        HorizontalAlignment="Center" Background="Azure" BorderBrush="Transparent"
+                        BorderCornerRadius="4" ButtonStyle="General" Click="BtnSelected"
+                        ClickStyle="Sink" Content="选择" CoverBrush="#FF50F5DC"
+                        Cursor="Hand"
+                        FontSize="{StaticResource fontsize}"
+                        Foreground="Blue" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

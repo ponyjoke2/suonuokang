@@ -1,0 +1,11 @@
+﻿<Window
+    x:Class="WirelessUSG.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:WirelessUSG" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="WirelessUSG" Width="800" Height="450" WindowStyle="None" Closed="Window_Closed"
+    WindowState="Maximized" mc:Ignorable="d">
+    <Grid>
+        <Frame
+            x:Name="frame" Grid.Row="1" Grid.ColumnSpan="2"
+            Margin="0" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

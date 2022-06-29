@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Age" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="Birthday" xml:space="preserve">
+    <value>Birthday:</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ConnectedToDevice" xml:space="preserve">
+    <value>Please connect to a device</value>
+  </data>
+  <data name="CreateNewCase" xml:space="preserve">
+    <value>New Patient</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Denoise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImageEnhance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dynamic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DynamicRange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FocusPos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Freeze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\freeze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GainN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gain_minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GainP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gain_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harmonic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harmonic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heartbeat" xml:space="preserve">
+    <value>Heartbeat：</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>NO:</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="MaxMeasureCount" xml:space="preserve">
+    <value>no more than 4 sets</value>
+  </data>
+  <data name="MeasureAC" xml:space="preserve">
+    <value>GA(AC)</value>
+  </data>
+  <data name="MeasureAngle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="MeasureAreaCir" xml:space="preserve">
+    <value>Area/Circumference</value>
+  </data>
+  <data name="MeasureBPD" xml:space="preserve">
+    <value>GA(BPD)</value>
+  </data>
+  <data name="MeasureCRL" xml:space="preserve">
+    <value>GA(CRL)</value>
+  </data>
+  <data name="MeasureFL" xml:space="preserve">
+    <value>GA(FL)</value>
+  </data>
+  <data name="MeasureGSD" xml:space="preserve">
+    <value>GA(GS)</value>
+  </data>
+  <data name="MeasureHC" xml:space="preserve">
+    <value>GA(HC)</value>
+  </data>
+  <data name="MeasureLength" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="MeasureTrace" xml:space="preserve">
+    <value>Trace</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name：</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="PatientInformation" xml:space="preserve">
+    <value>Patient</value>
+  </data>
+  <data name="ReplayFrames" xml:space="preserve">
+    <value>Cine Loop</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="RestartAndReconnect" xml:space="preserve">
+    <value>Please restart and reconnect</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Save Failed</value>
+  </data>
+  <data name="SaveImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Save Successful</value>
+  </data>
+  <data name="SaveVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sex：</value>
+  </data>
+  <data name="ShowInformation" xml:space="preserve">
+    <value>Show Info</value>
+  </data>
+  <data name="StateFreeze" xml:space="preserve">
+    <value>FREEZE</value>
+  </data>
+  <data name="StateLive" xml:space="preserve">
+    <value>LIVE</value>
+  </data>
+  <data name="StateReplay" xml:space="preserve">
+    <value>REPLAY</value>
+  </data>
+  <data name="Steer" xml:space="preserve">
+    <value>Steer</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Tips</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="WiFiChannel" xml:space="preserve">
+    <value>WiFi Channel</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DepthDecrease" xml:space="preserve">
+    <value>Depth-</value>
+  </data>
+  <data name="DepthIncrease" xml:space="preserve">
+    <value>Depth+</value>
+  </data>
+  <data name="Meas_info_AC" xml:space="preserve">
+    <value>AC</value>
+  </data>
+  <data name="Meas_info_ANGLE" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="Meas_info_AREA" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Meas_info_CIRCUM" xml:space="preserve">
+    <value>Circum</value>
+  </data>
+  <data name="Meas_info_EDD" xml:space="preserve">
+    <value>EDD</value>
+  </data>
+  <data name="Meas_info_GA" xml:space="preserve">
+    <value>GA</value>
+  </data>
+  <data name="Meas_info_GA_BPD" xml:space="preserve">
+    <value>BPD</value>
+  </data>
+  <data name="Meas_info_GA_CRL" xml:space="preserve">
+    <value>CRL</value>
+  </data>
+  <data name="Meas_info_GA_FL" xml:space="preserve">
+    <value>FL</value>
+  </data>
+  <data name="Meas_info_GA_GS" xml:space="preserve">
+    <value>GS</value>
+  </data>
+  <data name="Meas_info_GA_HC" xml:space="preserve">
+    <value>HC</value>
+  </data>
+  <data name="Meas_info_LENGTH" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="BiopsyClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="BiopsyEnhance" xml:space="preserve">
+    <value>Enhance</value>
+  </data>
+  <data name="BiopsyInPlane" xml:space="preserve">
+    <value>In-Plane</value>
+  </data>
+  <data name="BiopsyOutPlane" xml:space="preserve">
+    <value>Out-Plane</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Abdomen" xml:space="preserve">
+    <value>Abdomen</value>
+  </data>
+  <data name="Breast" xml:space="preserve">
+    <value>Breast</value>
+  </data>
+  <data name="Cardiac" xml:space="preserve">
+    <value>Cardiac</value>
+  </data>
+  <data name="Carotid" xml:space="preserve">
+    <value>Carotid</value>
+  </data>
+  <data name="Gynecology" xml:space="preserve">
+    <value>Gynecology</value>
+  </data>
+  <data name="Kidney" xml:space="preserve">
+    <value>Kidney</value>
+  </data>
+  <data name="Msk" xml:space="preserve">
+    <value>Msk</value>
+  </data>
+  <data name="Obstertric" xml:space="preserve">
+    <value>Obstertric</value>
+  </data>
+  <data name="Pediatrics" xml:space="preserve">
+    <value>Pediatrics</value>
+  </data>
+  <data name="Smallparts" xml:space="preserve">
+    <value>SmallParts</value>
+  </data>
+  <data name="Thyroid" xml:space="preserve">
+    <value>Thyroid</value>
+  </data>
+  <data name="Urology" xml:space="preserve">
+    <value>Urology</value>
+  </data>
+  <data name="Vascular" xml:space="preserve">
+    <value>Vascular</value>
+  </data>
+  <data name="BaseLine" xml:space="preserve">
+    <value>BaseLine</value>
+  </data>
+  <data name="MeasureEFW" xml:space="preserve">
+    <value>EFW</value>
+  </data>
+  <data name="MeasureBPD_EFW" xml:space="preserve">
+    <value>EFW(BPD)</value>
+  </data>
+  <data name="MeasureFL_EFW" xml:space="preserve">
+    <value>EFW(FL)</value>
+  </data>
+  <data name="MeasureHeartRate2" xml:space="preserve">
+    <value>HeartRate(2)</value>
+  </data>
+  <data name="MeasureVelocity" xml:space="preserve">
+    <value>Velocity</value>
+  </data>
+  <data name="Meas_info_BPD_EFW" xml:space="preserve">
+    <value>EFW(BPD)</value>
+  </data>
+  <data name="Meas_info_FL_EFW" xml:space="preserve">
+    <value>EFW(FL)</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="WifiConnectFailed" xml:space="preserve">
+    <value>Connect Failed</value>
+  </data>
+  <data name="WiFiDisconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="NoAvailableNetworkAdapter" xml:space="preserve">
+    <value>No Available Network Adapter!</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>HeartRate</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="USBConnection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USBConnection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WIFIConnection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Back1" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="DiagDoc" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="ExamNO" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IDNO" xml:space="preserve">
+    <value>ID NO</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="ReqDoc" xml:space="preserve">
+    <value>Physician</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Tip_4Images" xml:space="preserve">
+    <value>The maximum of images is 4</value>
+    <comment>最多只能添加4张图片</comment>
+  </data>
+  <data name="Hospital" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="HospitalName" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="Tip_20Images" xml:space="preserve">
+    <value>The maximum of images is 20</value>
+  </data>
+  <data name="DeleteExamInfo" xml:space="preserve">
+    <value>These info will be deleted</value>
+  </data>
+  <data name="Annotate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\annote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Biopsy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biopsy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bm_mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bm_mode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b_mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b_mode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CGainN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_gain_minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CGainP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_gain_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Depth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DynamicRange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DynamicRange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FocusPos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FocusPos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freeze1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\freeze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gain_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gain_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gain_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gain_minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harmonic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harmonic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImageEnhance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImageEnhance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Measure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\measure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PatientInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Preset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Replay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteSuccessful" xml:space="preserve">
+    <value>Delete Successful</value>
+  </data>
+  <data name="SavedImage" xml:space="preserve">
+    <value>SavedImage</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>For clinical reference only, not as proof material</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="Examination" xml:space="preserve">
+    <value>Examination</value>
+  </data>
+  <data name="ExaminationDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="PatientNameCannotbBeEmpty" xml:space="preserve">
+    <value>Patient's cannot be Empty!</value>
+  </data>
+  <data name="PatientsManage" xml:space="preserve">
+    <value>Patients</value>
+  </data>
+  <data name="Physician" xml:space="preserve">
+    <value>Physician</value>
+  </data>
+  <data name="RecentExamination" xml:space="preserve">
+    <value>Recent Exam</value>
+  </data>
+  <data name="ReportObs" xml:space="preserve">
+    <value>Obs</value>
+  </data>
+  <data name="ReportTips" xml:space="preserve">
+    <value>Tips</value>
+  </data>
+  <data name="SavePatientData" xml:space="preserve">
+    <value>Save Patient Data</value>
+  </data>
+  <data name="SelectPatient" xml:space="preserve">
+    <value>Select Patient</value>
+  </data>
+  <data name="AddThisTemplate" xml:space="preserve">
+    <value>Add This Template</value>
+  </data>
+  <data name="DeleteSelectedPage" xml:space="preserve">
+    <value>Delete Page</value>
+  </data>
+  <data name="ReportTemplates" xml:space="preserve">
+    <value>TEMPLATES</value>
+  </data>
+  <data name="NameCannotContainsCharacters" xml:space="preserve">
+    <value>Name Cannot Contains Characters!</value>
+  </data>
+  <data name="Nerve" xml:space="preserve">
+    <value>Nerve</value>
+  </data>
+  <data name="Lung" xml:space="preserve">
+    <value>Lung</value>
+  </data>
+  <data name="FlowMode" xml:space="preserve">
+    <value>FlowMode</value>
+  </data>
+  <data name="Vessel" xml:space="preserve">
+    <value>VesselFlow</value>
+  </data>
+  <data name="AddDefault" xml:space="preserve">
+    <value>Add Default</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="UploadDicomFile" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="CannotConnetToServer" xml:space="preserve">
+    <value>Cannot connect to server</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Transcranial" xml:space="preserve">
+    <value>Transcranial</value>
+    <comment>经颅</comment>
+  </data>
+  <data name="DeleteFilesAfterUpload" xml:space="preserve">
+    <value>Delete files after upload</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+    <comment>dicom中的过滤按钮</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+    <comment>dicom中的上传按钮</comment>
+  </data>
+  <data name="Measuring" xml:space="preserve">
+    <value>Measuring...</value>
+  </data>
+  <data name="ExaminationConvex" xml:space="preserve">
+    <value>Convex</value>
+  </data>
+  <data name="ExaminationLinear" xml:space="preserve">
+    <value>Linear</value>
+  </data>
+</root>

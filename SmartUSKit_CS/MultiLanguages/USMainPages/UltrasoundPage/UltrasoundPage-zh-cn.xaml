@@ -1,0 +1,54 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:SmartUSKit_CS.MultiLanguages.USMainPages.UltrasoundPage"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <ImageBrush x:Key="FreezeBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/freeze.png" />
+    <ImageBrush x:Key="GainPBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/gain_add.png" />
+    <ImageBrush x:Key="GainNBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/gain_minus.png" />
+    <ImageBrush x:Key="MeasureBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/measure.png" />
+    <ImageBrush x:Key="AnnotateBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/annote.png" />
+    <ImageBrush x:Key="ClearBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/clear.png" />
+    <ImageBrush x:Key="SaveImageBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/save_image.png" />
+    <ImageBrush x:Key="SaveVideoBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/save_video.png" />
+    <ImageBrush x:Key="BiopsyBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/biopsy.png" />
+    <ImageBrush x:Key="PlayBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/play.png" />
+    <ImageBrush x:Key="NewGainPBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/new_gain_add.png" />
+    <ImageBrush x:Key="NewGainNBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/new_gain_minus.png" />
+    <ImageBrush x:Key="DepthBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/depth.png" />
+    <ImageBrush x:Key="FocusBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/FocusPos.png" />
+    <ImageBrush x:Key="DynamicBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/DynamicRange.png" />
+    <ImageBrush x:Key="HarmonicBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/Harmonic.png" />
+    <ImageBrush x:Key="ImageEnhanceBtnRes" ImageSource="/SmartUSKit_View;component/Resources/zh-cn/ImageEnhance.png" />
+
+
+
+
+
+    <system:String x:Key="FlowModeTxtRes">血流模式</system:String>
+    <system:String x:Key="SavePatientTxtRes">保存病人数据</system:String>
+    <system:String x:Key="ResetTxtRes">复位</system:String>
+    <system:String x:Key="BaselineTxtRes">基线</system:String>
+    <system:String x:Key="ClearBiopsyTxtRes">清除</system:String>
+    <system:String x:Key="EnhanceBiopsyTxtRes">增强</system:String>
+    <system:String x:Key="OutPanelBiopsyTxtRes">平面外</system:String>
+    <system:String x:Key="InPanelBiopsyTxtRes">平面内</system:String>
+    <system:String x:Key="CorrectAngleTxtRes">校正角度</system:String>
+    <system:String x:Key="SampleVolumeTxtRes">采样容积</system:String>
+    <system:String x:Key="SteerTxtRes">偏转角度</system:String>
+    <system:String x:Key="BMTimeMeasureTxtRes">时间</system:String>
+    <system:String x:Key="BMHeartrateMeasureTxtRes">心率</system:String>
+    <system:String x:Key="BMDistanceMeasureTxtRes">距离</system:String>
+    <system:String x:Key="VelocityMeasureTxtRes">速度</system:String>
+    <system:String x:Key="PWHeartrate2MeasureTxtRes">心率(2)</system:String>
+    <system:String x:Key="FL_EFWMeasureTxtRes">胎重(股骨长)</system:String>
+    <system:String x:Key="BPD_EFWMeasureTxtRes">胎重(双顶径)</system:String>
+    <system:String x:Key="ACMeasureTxtRes">腹围</system:String>
+    <system:String x:Key="HCMeasureTxtRes">头围</system:String>
+    <system:String x:Key="FLMeasureTxtRes">股骨长</system:String>
+    <system:String x:Key="GSDMeasureTxtRes">孕囊直径</system:String>
+    <system:String x:Key="BPDMeasureTxtRes">双顶径</system:String>
+    <system:String x:Key="CRLMeasureTxtRes">头臀长</system:String>
+    <system:String x:Key="TraceMeasureTxtRes">轨迹</system:String>
+    <system:String x:Key="AreaCirMeasureTxtRes">面积/周长</system:String>
+    <system:String x:Key="AngleMeasureTxtRes">角度</system:String>
+    <system:String x:Key="LengthMeasureTxtRes">长度</system:String>
+</ResourceDictionary>

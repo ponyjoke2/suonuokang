@@ -1,0 +1,3050 @@
+﻿<Page
+    x:Class="SmartUSKit_CS.USMainPages.UltrasoundPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:SmartUSKit_CS.Controls" xmlns:converters="clr-namespace:SmartUSKit_CS.Converters" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SmartUSKit_CS.USMainPages" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:shadereffectlibrary="clr-namespace:ShaderEffectLibrary;assembly=ShaderEffectLibrary"
+    xmlns:smartUSControls="clr-namespace:SmartUSControls.USControls;assembly=SmartUSControls" Title="UltrasoundPage" d:DesignHeight="1080"
+    d:DesignWidth="1920" Loaded="OnLoaded" SizeChanged="Page_SizeChanged"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary x:Name="mainRes">
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="pack://application:,,,/Panuon.UI.Silver;component/Control.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/SmartUSKit_View;Component/Themes/Generic.xaml" />
+                <ResourceDictionary x:Name="ButtonsResource" Source="/SmartUSKit_View;component/MultiLanguages/USMainPages/UltrasoundPage/UltrasoundPage-zh-cn.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+
+
+            <DropShadowEffect
+                x:Key="DropShadowEffect" BlurRadius="20" Direction="0"
+                Opacity="0.99" ShadowDepth="0" Color="White" />
+            <Style x:Key="SaveImageStyle" TargetType="{x:Type Image}">
+                <Setter Property="FlowDirection" Value="LeftToRight" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Setter Property="Effect" Value="{StaticResource DropShadowEffect}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+
+            <SolidColorBrush x:Key="ThemeForegroundColor" Color="#FF4BCFDA" />
+            <converters:RectConverter x:Key="rectConverter" />
+            <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD" />
+            <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070" />
+            <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD" />
+            <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1" />
+            <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6" />
+            <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B" />
+            <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4" />
+            <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5" />
+            <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383" />
+            <Storyboard x:Key="roundanimation">
+                <ColorAnimation
+                    AutoReverse="True" BeginTime="00:00:00" RepeatBehavior="1"
+                    Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" From="Lime"
+                    To="Red" Duration="00:00:0.8" />
+            </Storyboard>
+            <Style x:Key="ButtonSubQuarterCircleBRStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundColor}" />
+                <Setter Property="FontSize" Value="21" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid ShowGridLines="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30*" />
+                                    <ColumnDefinition Width="128*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70*" />
+                                    <RowDefinition Height="128*" />
+                                </Grid.RowDefinitions>
+                                <Path
+                                    Name="mypath" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M49.493671,0.5 L99.5,0.5 99.5,79.5 C99.5,90.545695 90.545695,99.5 79.5,99.5 L20.5,99.5 0.5,99.5 0.5,49.493671 1.2776173,49.483833 C27.600678,48.816933 48.816933,27.600678 49.483833,1.2776173 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" />
+                                <Path
+                                    Name="mypathAnimation" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M49.493671,0.5 L99.5,0.5 99.5,79.5 C99.5,90.545695 90.545695,99.5 79.5,99.5 L20.5,99.5 0.5,99.5 0.5,49.493671 1.2776173,49.483833 C27.600678,48.816933 48.816933,27.600678 49.483833,1.2776173 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" Visibility="Hidden" />
+
+                                <Viewbox Grid.Row="1" Grid.Column="1" Margin="0,0,8,0">
+                                    <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Viewbox>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefault" Value="False">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="white" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="4" />
+                                    <Setter Property="FontSize" Value="22" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="mypath" Property="Fill" Value="#ff262626" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                    <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="#ffb6b6b6" />
+                                    <!--<Setter Property="Fill" TargetName="mypath" Value="#FF8DA7AE"/>
+                                <Setter Property="Stroke" TargetName="mypath" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+
+                                <!--  激活状态  -->
+                                <Trigger Property="Tag" Value="run">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="mypathAnimation" Property="StrokeThickness" Value="3" />
+                                    <Setter TargetName="mypathAnimation" Property="Stroke" Value="lime" />
+                                    <!--<Trigger.EnterActions>
+                                    <BeginStoryboard >
+                                        <Storyboard >
+                                            <ColorAnimation Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"  Storyboard.TargetName="mypathAnimation"
+                                             BeginTime="00:00:00" From="Lime" To="Red"
+                                             Duration="00:00:0.8" AutoReverse="True" RepeatBehavior="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                </Trigger.ExitActions>-->
+                                </Trigger>
+                                <!--  非激活状态  -->
+                                <!--<Trigger Property="IsEnabled" Value="false">-->
+                                <Trigger Property="Tag" Value="stop">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Hidden" />
+                                    <!--<PauseStoryboard BeginStoryboardName="OpacityStoryboard" />-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="ButtonSubQuarterCircleTLStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundColor}" />
+                <Setter Property="FontSize" Value="21" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid ShowGridLines="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="128*" />
+                                    <ColumnDefinition Width="50*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="128*" />
+                                    <RowDefinition Height="73*" />
+                                </Grid.RowDefinitions>
+                                <Path
+                                    Name="mypath" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M00.5,20.5 C0.5,9.454305 9.454305,0.5 20.5,0.5  L99.5,0.5 99.5,50.506329 98.722382,50.516167 C72.399323,51.183067 51.183067,72.399323 50.516167,98.722382 L50.506329,99.5 0.5,99.5 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" />
+                                <Path
+                                    Name="mypathAnimation" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M00.5,20.5 C0.5,9.454305 9.454305,0.5 20.5,0.5  L99.5,0.5 99.5,50.506329 98.722382,50.516167 C72.399323,51.183067 51.183067,72.399323 50.516167,98.722382 L50.506329,99.5 0.5,99.5 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" Visibility="Hidden" />
+                                <Viewbox Grid.Row="0" Grid.Column="0" Margin="8,0,0,0">
+                                    <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Viewbox>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefault" Value="False">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="white" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="4" />
+                                    <Setter Property="FontSize" Value="22" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="mypath" Property="Fill" Value="#ff262626" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                    <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="#ffb6b6b6" />
+                                    <!--<Setter Property="Fill" TargetName="mypath" Value="#FF8DA7AE"/>
+                                <Setter Property="Stroke" TargetName="mypath" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+
+                                <!--  激活状态  -->
+                                <Trigger Property="Tag" Value="run">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="mypathAnimation" Property="StrokeThickness" Value="3" />
+                                    <Setter TargetName="mypathAnimation" Property="Stroke" Value="Lime" />
+                                    <!--<Trigger.EnterActions>
+                                    <BeginStoryboard >
+                                        <Storyboard >
+                                            <ColorAnimation Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"  Storyboard.TargetName="mypathAnimation"
+                                             BeginTime="00:00:00" From="Lime" To="Red"
+                                             Duration="00:00:0.8" AutoReverse="True" RepeatBehavior="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                </Trigger.ExitActions>-->
+                                </Trigger>
+                                <!--  非激活状态  -->
+                                <!--<Trigger Property="IsEnabled" Value="false">-->
+                                <Trigger Property="Tag" Value="stop">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Hidden" />
+                                    <!--<PauseStoryboard BeginStoryboardName="OpacityStoryboard" />-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="ButtonSubQuarterCircleTRStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundColor}" />
+                <Setter Property="FontSize" Value="21" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid ShowGridLines="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="128*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="128*" />
+                                    <RowDefinition Height="73*" />
+                                </Grid.RowDefinitions>
+                                <Path
+                                    Name="mypath" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M0.5,0.5 L79.5,0.5 C90.545695,0.5 99.5,9.454305 99.5,20.5 L99.5,79.5 99.5,99.5 49.493671,99.5 49.483833,98.722382 C48.816933,72.399323 27.600678,51.183067 1.2776173,50.516167 L0.5,50.506329 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" />
+                                <Path
+                                    Name="mypathAnimation" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M0.5,0.5 L79.5,0.5 C90.545695,0.5 99.5,9.454305 99.5,20.5 L99.5,79.5 99.5,99.5 49.493671,99.5 49.483833,98.722382 C48.816933,72.399323 27.600678,51.183067 1.2776173,50.516167 L0.5,50.506329 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" Visibility="Hidden" />
+                                <Viewbox Grid.Row="0" Grid.Column="1" Margin="0,0,8,0">
+                                    <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Viewbox>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefault" Value="False">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="white" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="4" />
+                                    <Setter Property="FontSize" Value="22" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="mypath" Property="Fill" Value="#ff262626" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                    <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="#ffb6b6b6" />
+                                    <!--<Setter Property="Fill" TargetName="mypath" Value="#FF8DA7AE"/>
+                                <Setter Property="Stroke" TargetName="mypath" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+
+                                <!--  激活状态  -->
+                                <Trigger Property="Tag" Value="run">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="mypathAnimation" Property="StrokeThickness" Value="3" />
+                                    <Setter TargetName="mypathAnimation" Property="Stroke" Value="lime" />
+                                    <!--<Trigger.EnterActions>
+                                    <BeginStoryboard >
+                                        <Storyboard >
+                                            <ColorAnimation Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"  Storyboard.TargetName="mypathAnimation"
+                                             BeginTime="00:00:00" From="Lime" To="Red"
+                                             Duration="00:00:0.8" AutoReverse="True" RepeatBehavior="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                </Trigger.ExitActions>-->
+                                </Trigger>
+                                <!--  非激活状态  -->
+                                <!--<Trigger Property="IsEnabled" Value="false">-->
+                                <Trigger Property="Tag" Value="stop">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Hidden" />
+                                    <!--<PauseStoryboard BeginStoryboardName="OpacityStoryboard" />-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="ButtonSubQuarterCircleBLStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundColor}" />
+                <Setter Property="FontSize" Value="21" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid ShowGridLines="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="128*" />
+                                    <ColumnDefinition Width="10*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70*" />
+                                    <RowDefinition Height="128*" />
+                                </Grid.RowDefinitions>
+                                <Path
+                                    Name="mypath" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M0.5,0.5 L50.506329,0.5 50.516167,1.2776173 C51.183067,27.600678 72.399323,48.816933 98.722382,49.483833 L99.5,49.493671 99.5,99.5 20.5,99.5 C9.454305,99.5 0.5,90.545695 0.5,79.5  z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" />
+                                <Path
+                                    Name="mypathAnimation" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    Data="M0.5,0.5 L50.506329,0.5 50.516167,1.2776173 C51.183067,27.600678 72.399323,48.816933 98.722382,49.483833 L99.5,49.493671 99.5,99.5 20.5,99.5 C9.454305,99.5 0.5,90.545695 0.5,79.5 z"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stretch="Fill" Stroke="Transparent" Visibility="Hidden" />
+                                <Viewbox Grid.Row="1" Grid.Column="0" Margin="8,0,0,0">
+
+                                    <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Viewbox>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefault" Value="False">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="white" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="mypath" Property="StrokeThickness" Value="4" />
+                                    <Setter Property="FontSize" Value="22" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="mypath" Property="Fill" Value="#ff262626" />
+                                    <Setter TargetName="mypath" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                    <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="#ffb6b6b6" />
+                                    <!--<Setter Property="Fill" TargetName="mypath" Value="#FF8DA7AE"/>
+                                <Setter Property="Stroke" TargetName="mypath" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+
+                                <!--  激活状态  -->
+                                <Trigger Property="Tag" Value="run">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="mypathAnimation" Property="StrokeThickness" Value="3" />
+                                    <Setter TargetName="mypathAnimation" Property="Stroke" Value="Lime" />
+                                    <!--<Trigger.EnterActions>
+                                    <BeginStoryboard >
+                                        <Storyboard >
+                                            <ColorAnimation Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"  Storyboard.TargetName="mypathAnimation"
+                                             BeginTime="00:00:00" From="Lime" To="Red"
+                                             Duration="00:00:0.8" AutoReverse="True" RepeatBehavior="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                </Trigger.ExitActions>-->
+                                </Trigger>
+                                <!--  非激活状态  -->
+                                <!--<Trigger Property="IsEnabled" Value="false">-->
+                                <Trigger Property="Tag" Value="stop">
+                                    <Setter TargetName="mypathAnimation" Property="Visibility" Value="Hidden" />
+                                    <!--<PauseStoryboard BeginStoryboardName="OpacityStoryboard" />-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ButtonRoundStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundColor}" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="FontSize" Value="21" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid ShowGridLines="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="128*" />
+                                    <ColumnDefinition Width="50*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*" />
+                                    <RowDefinition Height="128*" />
+                                    <RowDefinition Height="50*" />
+                                </Grid.RowDefinitions>
+                                <Ellipse
+                                    x:Name="ellipse" Grid.RowSpan="3" Grid.ColumnSpan="3"
+                                    HorizontalAlignment="Stretch"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stroke="Transparent" />
+                                <Ellipse
+                                    x:Name="ellipseAnimation" Grid.RowSpan="3" Grid.ColumnSpan="3"
+                                    HorizontalAlignment="Stretch"
+                                    Fill="{StaticResource ThemeBackgroundColor}"
+                                    Stroke="Transparent" Visibility="Hidden" />
+                                <Viewbox Grid.Row="1" Grid.Column="1">
+
+                                    <ContentPresenter
+                                        Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Viewbox>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefault" Value="False">
+                                    <Setter TargetName="ellipse" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="ellipse" Property="Stroke" Value="white" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="ellipse" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="ellipse" Property="StrokeThickness" Value="4" />
+                                    <Setter Property="FontSize" Value="22" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="ellipse" Property="Fill" Value="#ff262626" />
+                                    <Setter TargetName="ellipse" Property="Stroke" Value="{StaticResource Button.Disabled.Border}" />
+                                    <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="#ffb6b6b6" />
+                                    <!--<Setter Property="Effect" Value="{StaticResource  monochrome}"/>-->
+                                </Trigger>
+
+                                <!--  激活状态  -->
+                                <Trigger Property="Tag" Value="run">
+                                    <Setter TargetName="ellipseAnimation" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="ellipseAnimation" Property="StrokeThickness" Value="3" />
+                                    <Setter TargetName="ellipseAnimation" Property="Stroke" Value="Lime" />
+                                    <!--<Trigger.EnterActions>
+                                    <BeginStoryboard >
+                                        <Storyboard >
+                                            <ColorAnimation Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"  Storyboard.TargetName="ellipseAnimation"
+                                             BeginTime="00:00:00" From="Lime" To="Red"
+                                             Duration="00:00:0.8" AutoReverse="True" RepeatBehavior="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                </Trigger.ExitActions>-->
+                                </Trigger>
+                                <!--  非激活状态  -->
+                                <!--<Trigger Property="IsEnabled" Value="false">-->
+                                <Trigger Property="Tag" Value="stop">
+                                    <Setter TargetName="ellipseAnimation" Property="Visibility" Value="Hidden" />
+                                    <!--<PauseStoryboard BeginStoryboardName="OpacityStoryboard" />-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="listboxButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Rectangle Name="rect" Fill="Transparent" />
+                                <ContentPresenter
+                                    Margin="1"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsFocused" Value="True" />
+                                <Trigger Property="IsDefaulted" Value="True" />
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter TargetName="rect" Property="Stroke" Value="Lime" />
+                                    <!--<Setter Property="Stroke" TargetName="mypathAnimation" Value="white"/>-->
+                                    <Setter TargetName="rect" Property="StrokeThickness" Value="2" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True" />
+                                <Trigger Property="IsEnabled" Value="False" />
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <shadereffectlibrary:MonochromeEffect x:Key="monochrome" />
+            <Style x:Key="MinsizeButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="border" BorderBrush="White" CornerRadius="0">
+                                <Grid Background="Transparent">
+                                    <ContentPresenter
+                                        Margin="{TemplateBinding Margin}"
+                                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Content="{TemplateBinding ContentControl.Content}">
+                                        <ContentPresenter.Clip>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0">
+                                                <RectangleGeometry.Rect>
+                                                    <MultiBinding Converter="{StaticResource rectConverter}" ConverterParameter="LastFirst">
+                                                        <Binding ElementName="border" Path="ActualWidth" />
+                                                        <Binding ElementName="border" Path="ActualHeight" />
+                                                    </MultiBinding>
+                                                </RectangleGeometry.Rect>
+                                            </RectangleGeometry>
+                                        </ContentPresenter.Clip>
+                                    </ContentPresenter>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!--<Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
+                            </Trigger>-->
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <!--<Setter Property="BorderThickness" TargetName="border" Value="1.5"/>-->
+                                    <Setter TargetName="border" Property="Background" Value="#FF0B1C87" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <!--<Setter Property="Opacity" TargetName="border" Value="0.9"/>-->
+                                    <!--<Setter Property="BorderThickness" TargetName="border" Value="2.5"/>-->
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Effect" Value="{StaticResource monochrome}" />
+                                    <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="Margin" Value=" 1 "/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Effect" Value= "{StaticResource monochrome}" />
+                </Trigger>
+
+            </Style.Triggers>-->
+            </Style>
+            <Style x:Key="CloseButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="border" BorderBrush="White" CornerRadius="0">
+                                <Grid Background="Transparent">
+                                    <ContentPresenter
+                                        Margin="{TemplateBinding Margin}"
+                                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Content="{TemplateBinding ContentControl.Content}">
+                                        <ContentPresenter.Clip>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0">
+                                                <RectangleGeometry.Rect>
+                                                    <MultiBinding Converter="{StaticResource rectConverter}" ConverterParameter="LastFirst">
+                                                        <Binding ElementName="border" Path="ActualWidth" />
+                                                        <Binding ElementName="border" Path="ActualHeight" />
+                                                    </MultiBinding>
+                                                </RectangleGeometry.Rect>
+                                            </RectangleGeometry>
+                                        </ContentPresenter.Clip>
+                                    </ContentPresenter>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!--<Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
+                            </Trigger>-->
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <!--<Setter Property="BorderThickness" TargetName="border" Value="1.5"/>-->
+                                    <Setter TargetName="border" Property="Background" Value="Red" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <!--<Setter Property="Opacity" TargetName="border" Value="0.9"/>-->
+                                    <!--<Setter Property="BorderThickness" TargetName="border" Value="2.5"/>-->
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Effect" Value="{StaticResource monochrome}" />
+                                    <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="Margin" Value=" 1 "/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Effect" Value= "{StaticResource monochrome}" />
+                </Trigger>
+
+            </Style.Triggers>-->
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid Background="{TemplateBinding Background}">
+                                <Border Name="border" BorderBrush="Black" CornerRadius="4">
+                                    <ContentPresenter
+                                        Margin="{TemplateBinding Margin}"
+                                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Content="{TemplateBinding ContentControl.Content}">
+                                        <ContentPresenter.Clip>
+                                            <RectangleGeometry RadiusX="6" RadiusY="6">
+                                                <RectangleGeometry.Rect>
+                                                    <MultiBinding Converter="{StaticResource rectConverter}" ConverterParameter="LastFirst">
+                                                        <Binding ElementName="border" Path="ActualWidth" />
+                                                        <Binding ElementName="border" Path="ActualHeight" />
+                                                    </MultiBinding>
+                                                </RectangleGeometry.Rect>
+                                            </RectangleGeometry>
+                                        </ContentPresenter.Clip>
+                                    </ContentPresenter>
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <!--<Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
+                            </Trigger>-->
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="border" Property="BorderThickness" Value="1.5" />
+                                    <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <!--<Setter Property="Opacity" TargetName="border" Value="0.9"/>-->
+                                    <Setter TargetName="border" Property="BorderThickness" Value="2.5" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Effect" Value="{StaticResource monochrome}" />
+                                    <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="Margin" Value=" 1 "/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Effect" Value= "{StaticResource monochrome}" />
+                </Trigger>
+
+            </Style.Triggers>-->
+            </Style>
+            <Style x:Key="SonoptekMeasureButton" TargetType="{x:Type Button}">
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="border" BorderBrush="White" CornerRadius="4">
+                                <Grid>
+                                    <ContentPresenter
+                                        x:Name="contentGrid" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Content="{TemplateBinding ContentControl.Content}">
+                                        <ContentPresenter.Clip>
+                                            <RectangleGeometry RadiusX="10" RadiusY="10">
+                                                <RectangleGeometry.Rect>
+                                                    <MultiBinding Converter="{StaticResource rectConverter}" ConverterParameter="LastFirst">
+                                                        <Binding ElementName="border" Path="ActualWidth" />
+                                                        <Binding ElementName="border" Path="ActualHeight" />
+                                                    </MultiBinding>
+                                                </RectangleGeometry.Rect>
+                                            </RectangleGeometry>
+                                        </ContentPresenter.Clip>
+                                    </ContentPresenter>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!--<Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
+                            </Trigger>-->
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="border" Property="BorderThickness" Value="1.5" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <!--<Setter Property="Opacity" TargetName="border" Value="0.9"/>-->
+                                    <Setter TargetName="border" Property="BorderThickness" Value="2.5" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="contentGrid" Property="Effect" Value="{StaticResource monochrome}" />
+                                    <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="Margin" Value=" 1 "/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Effect" Value= "{StaticResource monochrome}" />
+                </Trigger>
+
+            </Style.Triggers>-->
+            </Style>
+            <Style x:Key="MyMouseOverButton" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="Transparent" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <!--  圆角button  -->
+            <LinearGradientBrush x:Key="ButtonBorder" StartPoint="1,0.5" EndPoint="0,0.5">
+                <GradientStop Offset="0" Color="#278af7" />
+                <GradientStop Offset="1" Color="#5dd3aa" />
+            </LinearGradientBrush>
+            <Style x:Key="MyButton" TargetType="Button">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Margin" Value="4" />
+                <Setter Property="FontWeight" Value="Black" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Background" Value="Red" />
+                <Setter Property="Width" Value="100" />
+                <Setter Property="Height" Value="35" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border
+                                Name="border"
+                                BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                BorderThickness="0" CornerRadius="5">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Offset="0.0" Color="#454545" />
+                                        <GradientStop Offset="0.5" Color="#454545" />
+                                        <GradientStop Offset="0.0" Color="#454545" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding ContentControl.Content}" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefaulted" Value="true">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="border" Property="BorderThickness" Value="4" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <Setter TargetName="border" Property="Background" Value="{StaticResource ButtonBorder}" />
+
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="border" Property="Background" Value="{StaticResource ButtonBorder}" />
+                                    <!--<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--  拖动块的按钮颜色  -->
+            <LinearGradientBrush x:Key="MyThumbColor" StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Offset="0" Color="#f9fbef" />
+                <GradientStop Offset="0.4" Color="#c2c3bb" />
+
+                <GradientStop Offset="0.4" Color="#f2f3e8" />
+                <GradientStop Offset="0.47" Color="#f2f3e8" />
+
+                <GradientStop Offset="0.47" Color="#353534" />
+                <GradientStop Offset="0.53" Color="#353534" />
+
+                <GradientStop Offset="0.53" Color="#f2f3e8" />
+                <GradientStop Offset="0.6" Color="#f2f3e8" />
+
+                <GradientStop Offset="0.6" Color="#c2c3bb" />
+                <GradientStop Offset="1.0" Color="#f9fbef" />
+            </LinearGradientBrush>
+            <!--  进度条左边的颜色  -->
+            <LinearGradientBrush x:Key="MySliderLeft" StartPoint="1,0.5" EndPoint="0,0.5">
+                <GradientStop Offset="0" Color="#278af7" />
+                <GradientStop Offset="1" Color="#5dd3aa" />
+            </LinearGradientBrush>
+
+            <SolidColorBrush x:Key="SliderThumb.Static.Foreground" Color="#FFE5E5E5" />
+            <SolidColorBrush x:Key="SliderThumb.MouseOver.Background" Color="#FFDCECFC" />
+            <SolidColorBrush x:Key="SliderThumb.MouseOver.Border" Color="#FF7Eb4EA" />
+            <SolidColorBrush x:Key="SliderThumb.Pressed.Background" Color="#FFDAECFC" />
+            <SolidColorBrush x:Key="SliderThumb.Pressed.Border" Color="#FF569DE5" />
+            <SolidColorBrush x:Key="SliderThumb.Disabled.Background" Color="#FFF0F0F0" />
+            <SolidColorBrush x:Key="SliderThumb.Disabled.Border" Color="#FFD9D9D9" />
+            <SolidColorBrush x:Key="SliderThumb.Static.Background" Color="#FFF0F0F0" />
+            <SolidColorBrush x:Key="SliderThumb.Static.Border" Color="Transparent" />
+            <ControlTemplate x:Key="SliderThumbHorizontalTop" TargetType="{x:Type Thumb}">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True">
+                    <Path
+                        x:Name="grip" VerticalAlignment="Center" Data="M 0,6 C0,6 5.5,0 5.5,0 5.5,0 11,6 11,6 11,6 11,18 11,18 11,18 0,18 0,18 0,18 0,6 0,6 z"
+                        Fill="{StaticResource SliderThumb.Static.Background}"
+                        SnapsToDevicePixels="True" Stretch="Fill"
+                        Stroke="{StaticResource SliderThumb.Static.Border}"
+                        StrokeThickness="1" UseLayoutRounding="True" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.MouseOver.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.MouseOver.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderThumbHorizontalBottom" TargetType="{x:Type Thumb}">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True">
+                    <Path
+                        x:Name="grip" VerticalAlignment="Center" Data="M 0,12 C0,12 5.5,18 5.5,18 5.5,18 11,12 11,12 11,12 11,0 11,0 11,0 0,0 0,0 0,0 0,12 0,12 z"
+                        Fill="{StaticResource SliderThumb.Static.Background}"
+                        SnapsToDevicePixels="True" Stretch="Fill"
+                        Stroke="{StaticResource SliderThumb.Static.Border}"
+                        StrokeThickness="1" UseLayoutRounding="True" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.MouseOver.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.MouseOver.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <SolidColorBrush x:Key="SliderThumb.Track.Border" Color="#FFD6D6D6" />
+            <SolidColorBrush x:Key="SliderThumb.Track.Background" Color="#FF181F29" />
+            <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Focusable" Value="false" />
+                <Setter Property="IsTabStop" Value="false" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                            <Rectangle
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+                                Fill="{TemplateBinding Background}"
+                                RadiusX="4" RadiusY="4" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="RepeatButtonTransparentLeft" TargetType="{x:Type RepeatButton}">
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Background" Value="#FF80CBC4" />
+                <Setter Property="Focusable" Value="false" />
+                <Setter Property="IsTabStop" Value="false" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                            <Rectangle
+                                Width="{TemplateBinding Width}"
+                                Height="8"
+                                Fill="{TemplateBinding Background}"
+                                RadiusX="4" RadiusY="4" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <ControlTemplate x:Key="SliderThumbHorizontalDefault" TargetType="{x:Type Thumb}">
+                <Grid
+                    Width="30" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    UseLayoutRounding="True">
+                    <Rectangle
+                        x:Name="grip" Width="20" Height="20"
+                        Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Fill="#FF80CBC4" RadiusX="10" RadiusY="10"
+                        Stroke="{StaticResource SliderThumb.Static.Border}"
+                        StrokeThickness="0" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="StrokeThickness" Value="2" />
+                        <Setter TargetName="grip" Property="Stroke" Value="Black" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderHorizontal" TargetType="{x:Type Slider}">
+                <Border
+                    x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TickBar
+                            x:Name="TopTick" Grid.Row="0" Height="4"
+                            Margin="0,0,0,2"
+                            Fill="{TemplateBinding Foreground}"
+                            Placement="Top" Visibility="Collapsed" />
+                        <TickBar
+                            x:Name="BottomTick" Grid.Row="2" Height="4"
+                            Margin="0,2,0,0"
+                            Fill="{TemplateBinding Foreground}"
+                            Placement="Bottom" Visibility="Collapsed" />
+                        <Border
+                            x:Name="TrackBackground" Grid.Row="1" Height="8.0"
+                            Margin="5,0" VerticalAlignment="center" Background="#3f4d62"
+                            BorderBrush="{StaticResource SliderThumb.Track.Border}"
+                            BorderThickness="1" CornerRadius="4">
+                            <Canvas>
+                                <Rectangle
+                                    x:Name="PART_SelectionRange" Height="8.0"
+                                    Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                                    Visibility="Hidden" />
+                            </Canvas>
+                        </Border>
+                        <Track x:Name="PART_Track" Grid.Row="1">
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton
+                                    Margin="0,0,-3,0" BorderThickness="0"
+                                    Command="{x:Static Slider.DecreaseLarge}"
+                                    Style="{StaticResource RepeatButtonTransparentLeft}" />
+                            </Track.DecreaseRepeatButton>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" />
+                            </Track.IncreaseRepeatButton>
+                            <Track.Thumb>
+                                <Thumb
+                                    x:Name="Thumb" Width="20" Height="20"
+                                    VerticalAlignment="Center" Focusable="False" OverridesDefaultStyle="True"
+                                    Template="{StaticResource SliderThumbHorizontalDefault}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="TickPlacement" Value="TopLeft">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="Thumb" Property="Template" Value="{StaticResource SliderThumbHorizontalTop}" />
+                        <Setter TargetName="TrackBackground" Property="Margin" Value="5,2,5,0" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="BottomRight">
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="Thumb" Property="Template" Value="{StaticResource SliderThumbHorizontalBottom}" />
+                        <Setter TargetName="TrackBackground" Property="Margin" Value="5,0,5,2" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="Both">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="IsSelectionRangeEnabled" Value="true">
+                        <Setter TargetName="PART_SelectionRange" Property="Visibility" Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocused" Value="true">
+                        <Setter TargetName="Thumb" Property="Foreground" Value="Blue" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderThumbVerticalLeft" TargetType="{x:Type Thumb}">
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True">
+                    <Border CornerRadius="4" />
+                    <Path
+                        x:Name="grip" Data="M 6,11 C6,11 0,5.5 0,5.5 0,5.5 6,0 6,0 6,0 18,0 18,0 18,0 18,11 18,11 18,11 6,11 6,11 z"
+                        Fill="{StaticResource SliderThumb.Static.Background}"
+                        Stretch="Fill"
+                        Stroke="{StaticResource SliderThumb.Static.Border}" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.MouseOver.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.MouseOver.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderThumbVerticalRight" TargetType="{x:Type Thumb}">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True">
+                    <Path
+                        x:Name="grip" Data="M 12,11 C12,11 18,5.5 18,5.5 18,5.5 12,0 12,0 12,0 0,0 0,0 0,0 0,11 0,11 0,11 12,11 12,11 z"
+                        Fill="{StaticResource SliderThumb.Static.Background}"
+                        Stretch="Fill"
+                        Stroke="{StaticResource SliderThumb.Static.Border}" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.MouseOver.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.MouseOver.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderThumbVerticalDefault" TargetType="{x:Type Thumb}">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True">
+                    <Path
+                        x:Name="grip" Data="M0.5,0.5 L18.5,0.5 18.5,11.5 0.5,11.5z"
+                        Fill="{StaticResource SliderThumb.Static.Background}"
+                        Stretch="Fill"
+                        Stroke="{StaticResource SliderThumb.Static.Border}" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.MouseOver.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.MouseOver.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsDragging" Value="true">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Pressed.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Pressed.Border}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter TargetName="grip" Property="Fill" Value="{StaticResource SliderThumb.Disabled.Background}" />
+                        <Setter TargetName="grip" Property="Stroke" Value="{StaticResource SliderThumb.Disabled.Border}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <ControlTemplate x:Key="SliderVertical" TargetType="{x:Type Slider}">
+                <Border
+                    x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding MinWidth}" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TickBar
+                            x:Name="TopTick" Grid.Column="0" Width="4"
+                            Margin="0,0,2,0"
+                            Fill="{TemplateBinding Foreground}"
+                            Placement="Left" Visibility="Collapsed" />
+                        <TickBar
+                            x:Name="BottomTick" Grid.Column="2" Width="4"
+                            Margin="2,0,0,0"
+                            Fill="{TemplateBinding Foreground}"
+                            Placement="Right" Visibility="Collapsed" />
+                        <Border
+                            x:Name="TrackBackground" Grid.Column="1" Width="4.0"
+                            Margin="0,5" HorizontalAlignment="center"
+                            Background="{StaticResource SliderThumb.Track.Background}"
+                            BorderBrush="{StaticResource SliderThumb.Track.Border}"
+                            BorderThickness="1">
+                            <Canvas Margin="0,0">
+                                <Rectangle
+                                    x:Name="PART_SelectionRange" Width="4.0"
+                                    Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                                    Visibility="Hidden" />
+                            </Canvas>
+                        </Border>
+                        <Track x:Name="PART_Track" Grid.Column="1">
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" />
+                            </Track.DecreaseRepeatButton>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" />
+                            </Track.IncreaseRepeatButton>
+                            <Track.Thumb>
+                                <Thumb
+                                    x:Name="Thumb" Width="18" Height="11"
+                                    VerticalAlignment="Top" Focusable="False" OverridesDefaultStyle="True"
+                                    Template="{StaticResource SliderThumbVerticalDefault}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="TickPlacement" Value="TopLeft">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="Thumb" Property="Template" Value="{StaticResource SliderThumbVerticalLeft}" />
+                        <Setter TargetName="TrackBackground" Property="Margin" Value="2,5,0,5" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="BottomRight">
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="Thumb" Property="Template" Value="{StaticResource SliderThumbVerticalRight}" />
+                        <Setter TargetName="TrackBackground" Property="Margin" Value="0,5,2,5" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="Both">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="IsSelectionRangeEnabled" Value="true">
+                        <Setter TargetName="PART_SelectionRange" Property="Visibility" Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocused" Value="true">
+                        <Setter TargetName="Thumb" Property="Foreground" Value="Blue" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+            <Style x:Key="SliderStyle1" TargetType="{x:Type Slider}">
+                <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="Foreground" Value="{StaticResource SliderThumb.Static.Foreground}" />
+                <Setter Property="Template" Value="{StaticResource SliderHorizontal}" />
+                <Style.Triggers>
+                    <Trigger Property="Orientation" Value="Vertical">
+                        <Setter Property="Template" Value="{StaticResource SliderVertical}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <SolidColorBrush x:Key="ThemeBackgroundColor" Color="#FF1E244A" />
+
+            <Style x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Background" Value="{StaticResource ThemeBackgroundColor}" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabItem}">
+                            <Grid
+                                x:Name="templateRoot"
+                                Margin="{TemplateBinding Margin}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+                                <TextBlock
+                                    x:Name="txt" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                    FontSize="20"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Text="{TemplateBinding Header}"
+                                    TextTrimming="CharacterEllipsis"
+                                    ToolTip="{TemplateBinding Header}"
+                                    Visibility="Visible" />
+                                <ContentControl>
+                                    <ContentControl.Template>
+                                        <ControlTemplate>
+                                            <!--  定义视觉树  -->
+                                            <Grid Name="TabCoverGrid" Background="Transparent" />
+                                            <!--  定义视觉树_end  -->
+                                            <!--  定义触发器  -->
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Cursor" Value="Hand" />
+                                                    <Setter TargetName="TabCoverGrid" Property="Opacity" Value="0.3" />
+                                                    <Setter TargetName="TabCoverGrid" Property="Background" Value="{StaticResource ThemeBackgroundColor}" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                            <!--  定义触发器_End  -->
+                                        </ControlTemplate>
+                                    </ContentControl.Template>
+                                </ContentControl>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
+                                    </MultiDataTrigger.Conditions>
+
+                                    <!--<Setter Property="Foreground" TargetName="txt" Value="lime"/>-->
+                                    <!--<Setter Property="FontSize" TargetName="txt" Value="17"/>-->
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Left" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Bottom" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Right" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
+                                </MultiDataTrigger>
+
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true" />
+                                        <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Panel.ZIndex" Value="1" />
+                                    <Setter TargetName="txt" Property="Foreground" Value="#FF4BCFDA" />
+                                    <Setter TargetName="txt" Property="FontWeight" Value="Bold" />
+                                </MultiDataTrigger>
+
+                                <!--<Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" TargetName="txt" Value="#FF75F4FF"/>
+                                <Setter Property="Background" TargetName="templateRoot" Value="Red"/>
+                            </Trigger>-->
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+                <Setter Property="Padding" Value="2" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Background" Value="#FF1E244A" />
+                <Setter Property="BorderBrush" Value="#FFACACAC" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <Grid
+                                x:Name="templateRoot" ClipToBounds="True" KeyboardNavigation.TabNavigation="Local"
+                                SnapsToDevicePixels="True">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Name="ColumnDefinition0" />
+                                    <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition x:Name="RowDefinition0" Height="Auto" />
+                                    <RowDefinition x:Name="RowDefinition1" Height="*" />
+                                </Grid.RowDefinitions>
+                                <UniformGrid
+                                    x:Name="HeaderPanel" Grid.Row="0" Grid.Column="0"
+                                    Margin="0" Panel.ZIndex="1" Background="Transparent"
+                                    IsItemsHost="True" KeyboardNavigation.TabIndex="1" Rows="1" />
+                                <Line
+                                    Margin="0,0,0,1" VerticalAlignment="Bottom" SnapsToDevicePixels="True"
+                                    Stroke="White" StrokeThickness="0.1" X1="0"
+                                    X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" />
+                                <Border
+                                    x:Name="ContentPanel" Grid.Row="1" Grid.Column="0"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                    <ContentPresenter
+                                        x:Name="PART_SelectedContentHost" Margin="0"
+                                        Content="{TemplateBinding SelectedContent}"
+                                        ContentSource="SelectedContent"
+                                        ContentStringFormat="{TemplateBinding SelectedContentStringFormat}"
+                                        ContentTemplate="{TemplateBinding SelectedContentTemplate}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="TabStripPlacement" Value="Bottom">
+                                    <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="1" />
+                                    <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                    <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                    <Setter TargetName="RowDefinition1" Property="Height" Value="Auto" />
+                                </Trigger>
+                                <Trigger Property="TabStripPlacement" Value="Left">
+                                    <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="0" />
+                                    <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                    <Setter TargetName="HeaderPanel" Property="Grid.Column" Value="0" />
+                                    <Setter TargetName="ContentPanel" Property="Grid.Column" Value="1" />
+                                    <Setter TargetName="ColumnDefinition0" Property="Width" Value="Auto" />
+                                    <Setter TargetName="ColumnDefinition1" Property="Width" Value="*" />
+                                    <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                    <Setter TargetName="RowDefinition1" Property="Height" Value="0" />
+                                </Trigger>
+                                <Trigger Property="TabStripPlacement" Value="Right">
+                                    <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="0" />
+                                    <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                    <Setter TargetName="HeaderPanel" Property="Grid.Column" Value="1" />
+                                    <Setter TargetName="ContentPanel" Property="Grid.Column" Value="0" />
+                                    <Setter TargetName="ColumnDefinition0" Property="Width" Value="*" />
+                                    <Setter TargetName="ColumnDefinition1" Property="Width" Value="Auto" />
+                                    <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                    <Setter TargetName="RowDefinition1" Property="Height" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="templateRoot" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Margin="-1,0,-1,-1" Background="Black" ShowGridLines="False">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <!--  note you only need bring in these extra resource dictionaries when using non-default styles, so only bring them into your controls where the default style is not what you want  -->
+                    <ResourceDictionary Source="/SmartUSKit_View;component/Themes/SonoptekSlider.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"
+            Background="{DynamicResource ThemeBackgroundColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Name="btnConnection" Grid.Column="1" HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Background="{DynamicResource ThemeBackgroundColor}"
+                    BorderThickness="0" Focusable="False">
+                    <Image
+                        Name="ConnectionWayImage" VerticalAlignment="Stretch" Source="/Resources/wifi_icon.png"
+                        Stretch="Uniform" />
+                </Button>
+            </Grid>
+            <StackPanel Grid.Column="1" Margin="4,0,0,0" Orientation="Horizontal">
+                <Label x:Name="labelSSID" Grid.Column="1" Foreground="{StaticResource ThemeForegroundColor}" />
+
+            </StackPanel>
+            <WrapPanel Grid.Column="2" Orientation="Horizontal">
+
+
+                <Label Foreground="White">MI:</Label>
+                <Label x:Name="MILabel" Margin="0,0,0,0" Foreground="White" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Foreground="White">TIS:</Label>
+                    <Label x:Name="TISLabel" Foreground="White" />
+                </StackPanel>
+            </WrapPanel>
+            <Grid Grid.Column="3" MinWidth="250" HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        x:Name="btnPreset" Grid.Row="0" Grid.Column="1"
+                        Margin="0" HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        Background="{DynamicResource ThemeBackgroundColor}"
+                        BorderThickness="0" Click="MainButton_Click">
+                        <Image x:Name="ImagePreset" Source="/Resources/PresetWithoutText.png" Stretch="Uniform" />
+                    </Button>
+                </Grid>
+
+                <Label
+                    x:Name="labelVersion" Grid.Column="2" Margin="0,0,10,0"
+                    HorizontalAlignment="Right" Content="V 1.0.1"
+                    Foreground="{StaticResource ThemeForegroundColor}" />
+            </Grid>
+
+        </Grid>
+        <Border
+            Grid.Row="1" Grid.RowSpan="9" Grid.Column="0"
+            Grid.ColumnSpan="8" Margin="1,1,15,0">
+            <ContentControl
+                x:Name="viewContainer_Copy" MouseDown="Content_MouseDown" MouseUp="Content_MouseUp"
+                TouchDown="Content_TouchDown" />
+        </Border>
+        <Border
+            Grid.Row="1" Grid.RowSpan="9" Grid.Column="0"
+            Grid.ColumnSpan="8" Margin="1,1,15,0">
+            <ContentControl
+                x:Name="viewContainer" MouseDown="Content_MouseDown" MouseUp="Content_MouseUp"
+                TouchDown="Content_TouchDown" />
+        </Border>
+
+        <Image
+            x:Name="CoverImage" Grid.Row="1" Grid.RowSpan="9"
+            Grid.Column="0" Grid.ColumnSpan="8" Margin="1,1,15,1"
+            Stretch="None" Visibility="Hidden" />
+
+        <Grid Grid.Row="10" Grid.Column="1" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnPositiveGain" Grid.Row="9" Grid.Column="1"
+                Background="{DynamicResource GainPBtnRes}"
+                BorderThickness="0" Click="MainButton_Click" PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"
+                PreviewMouseLeftButtonUp="Image_PreviewMouseLeftButtonUp" TouchUp="btnGain_TouchUp" />
+            <Button
+                x:Name="btnNegativeGain" Grid.Row="9" Grid.Column="0"
+                Background="{DynamicResource GainNBtnRes}"
+                BorderThickness="0" Click="MainButton_Click" PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"
+                PreviewMouseLeftButtonUp="Image_PreviewMouseLeftButtonUp" TouchUp="btnGain_TouchUp" />
+        </Grid>
+        <Button
+            x:Name="btnDepth" Grid.Row="10" Grid.Column="4"
+            Background="{DynamicResource DepthBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnFocus" Grid.Row="10" Grid.Column="5"
+            Background="{DynamicResource FocusBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnDyn" Grid.Row="10" Grid.Column="6"
+            Background="{DynamicResource DynamicBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnHarmonic" Grid.Row="10" Grid.Column="3"
+            Background="{DynamicResource HarmonicBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnDenoise" Grid.Row="10" Grid.Column="2"
+            Background="{DynamicResource ImageEnhanceBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+
+        <Grid
+            Grid.Row="7" Grid.RowSpan="3" Grid.Column="0"
+            Height="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+            Margin="3" VerticalAlignment="Bottom" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnBCDViewer" Grid.Row="0" Grid.RowSpan="2"
+                Grid.Column="0" Grid.ColumnSpan="2" Click="SwitchViewerButton_Click"
+                Content="PW" IsEnabled="True"
+                Style="{DynamicResource ButtonSubQuarterCircleTLStyle}" />
+            <Button
+                x:Name="btnPWViewer" Grid.Row="0" Grid.RowSpan="2"
+                Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                VerticalAlignment="Center" Click="SwitchViewerButton_Click" Content="PW"
+                IsEnabled="False"
+                Style="{DynamicResource ButtonSubQuarterCircleTLStyle}" />
+            <Button
+                x:Name="btnPDIViewer" Grid.Row="0" Grid.RowSpan="2"
+                Grid.Column="2" Grid.ColumnSpan="2" Click="SwitchViewerButton_Click"
+                Content="PDI" IsEnabled="False"
+                Style="{DynamicResource ButtonSubQuarterCircleTRStyle}" />
+            <Button
+                x:Name="btnColorViewer" Grid.Row="2" Grid.RowSpan="2"
+                Grid.Column="0" Grid.ColumnSpan="2" Click="SwitchViewerButton_Click"
+                Content="Color" IsEnabled="False"
+                Style="{DynamicResource ButtonSubQuarterCircleBLStyle}" />
+            <Button
+                x:Name="btnBM" Grid.Row="2" Grid.RowSpan="2"
+                Grid.Column="2" Grid.ColumnSpan="2" Click="MainButton_Click"
+                Content="B/M" IsEnabled="False"
+                Style="{DynamicResource ButtonSubQuarterCircleBRStyle}" />
+            <Button
+                x:Name="btnBViewer" Grid.Row="1" Grid.RowSpan="2"
+                Grid.Column="1" Grid.ColumnSpan="2" Click="SwitchViewerButton_Click"
+                Content="B" IsEnabled="True"
+                Style="{DynamicResource ButtonRoundStyle}" />
+            <!--<Ellipse Fill="Red" HorizontalAlignment="Left" Height="100" Margin="79.334,135.334,0,0" Stroke="Green" VerticalAlignment="Top" Width="100"/>-->
+        </Grid>
+        <!--<Grid Background="AliceBlue" Height="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource Self}}" Grid.Row="7" Grid.Column="0" VerticalAlignment="Bottom" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Style="{x:Null}" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="PW"/>
+            <Button Grid.Column="2" Grid.Row="0" Style="{x:Null}" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="PDI"/>
+            <Button Grid.Column="0" Grid.Row="2" Style="{x:Null}" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="Color"/>
+            <Button Grid.Column="2" Grid.Row="2" Style="{x:Null}" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="BM"/>
+            <Button Content="B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"    Style="{DynamicResource ButtonRoundStyle}"/>
+        -->
+        <!--<Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="B"/>-->
+        <!--
+        </Grid>-->
+        <Button
+            x:Name="btnB" Grid.Row="6" Grid.Column="0"
+            Background="{DynamicResource ThemeBackgroundColor}"
+            BorderThickness="0" Click="MainButton_Click"
+            Foreground="{DynamicResource ThemeBackgroundColor}"
+            IsEnabled="True" Visibility="Hidden">
+            <!--<Image Source="/Resources/b_mode.png" Stretch="Fill"></Image>-->
+            <Border CornerRadius="20">
+                <Grid
+                    Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                    Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="Bbtnlbl" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="B " FontSize="24"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Border>
+        </Button>
+
+        <!--<Button x:Name="btnBM"  Grid.Row="8" Grid.Column="0" Background="{DynamicResource ThemeBackgroundColor}"  Click="MainButton_Click" BorderThickness="0">
+            <Image Source="/Resources/bm_mode.png" Stretch="Fill"></Image>
+        </Button>-->
+
+        <Button
+            x:Name="btnFreeze" Grid.Row="11" Grid.Column="0"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Background="{DynamicResource FreezeBtnRes}"
+            Click="MainButton_Click" />
+
+        <Button
+            x:Name="btnPlay" Grid.Row="11" Grid.Column="9"
+            Background="{DynamicResource PlayBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" Visibility="Visible" />
+
+        <Button
+            x:Name="btnSteer" Grid.Row="11" Grid.Column="8"
+            Background="{DynamicResource ThemeBackgroundColor}"
+            BorderThickness="0" Click="ColorButton_Click" Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="Steerbtnlbl" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="{DynamicResource SteerTxtRes}"
+                        FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+
+        <!--<Button x:Name="btnDepthIncrease" Visibility="Hidden" Grid.Row="11" Grid.Column="1" Background="{DynamicResource ThemeBackgroundColor}" BorderThickness="0" Click="MainButton_Click">
+            <Grid>
+                <Image Source="/Resources/button_backgroud.png" Stretch="Fill"></Image>
+                <Label x:Name="DepthIncreaselabel" Content="深度+ " Foreground="{StaticResource ThemeForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            </Grid>
+        </Button>-->
+
+        <Button
+            x:Name="btnMeas" Grid.Row="11" Grid.Column="2"
+            Background="{DynamicResource MeasureBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+
+        <Grid Grid.Row="11" Grid.Column="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                x:Name="btnColorNegativeGain" Grid.Row="11" Grid.Column="0"
+                Background="{DynamicResource NewGainNBtnRes}"
+                BorderThickness="0" PreviewMouseDown="ColorGain_PreviewMouseLeftButtonDown" PreviewMouseUp="ColorGain_PreviewMouseLeftButtonUp"
+                TouchUp="btnColorGain_TouchUp" Visibility="Hidden" />
+            <Button
+                x:Name="btnColorPositiveGain" Grid.Row="11" Grid.Column="1"
+                Background="{DynamicResource NewGainPBtnRes}"
+                BorderThickness="0" PreviewMouseDown="ColorGain_PreviewMouseLeftButtonDown" PreviewMouseUp="ColorGain_PreviewMouseLeftButtonUp"
+                TouchUp="btnColorGain_TouchUp" Visibility="Hidden" />
+        </Grid>
+
+
+        <!--<Button x:Name="btnDepthDecrease" Visibility="Hidden" Grid.Row="11" Grid.Column="2" Background="{DynamicResource ThemeBackgroundColor}" BorderThickness="0" Click="MainButton_Click">
+            <Grid>
+                <Image Source="/Resources/button_backgroud.png" Stretch="Fill"></Image>
+                <Label x:Name="DepthDecreaselabel" Content="深度- " Foreground="{StaticResource ThemeForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            </Grid>
+        </Button>-->
+
+        <Button
+            x:Name="btnAnnotate" Grid.Row="11" Grid.Column="3"
+            Background="{DynamicResource AnnotateBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+
+
+        <Button
+            x:Name="btnBiopsy" Grid.Row="11" Grid.Column="7"
+            Background="{DynamicResource BiopsyBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnZoomMove" Grid.Row="11" Grid.Column="4"
+            Background="Black" BorderThickness="0" Click="ColorButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <!--  这个需要在后台更新，先不搞  -->
+                    <Label
+                        x:Name="ZoomMoveLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="移动" FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+        <Button
+            x:Name="btnSampleVolume" Grid.Row="11" Grid.Column="4"
+            Background="Black" BorderThickness="0" Click="ColorButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="SampleVolumeLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="{DynamicResource SampleVolumeTxtRes}"
+                        FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+        <Button
+            x:Name="btnClear" Grid.Row="11" Grid.Column="4"
+            Background="{DynamicResource ClearBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnAngle" Grid.Row="11" Grid.Column="5"
+            Background="Black" BorderThickness="0" Click="ColorButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="AngleLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="{DynamicResource CorrectAngleTxtRes}"
+                        FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+        <Button
+            x:Name="btnWF" Grid.Row="11" Grid.Column="5"
+            Background="Black" BorderThickness="0" Click="ColorButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="WFLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="WF" FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+        <Button
+            x:Name="btnSave" Grid.Row="11" Grid.Column="5"
+            Background="{DynamicResource SaveImageBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Button
+            x:Name="btnPRF" Grid.Row="11" Grid.Column="6"
+            Background="Black" BorderThickness="0" Click="ColorButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="PRFLabel" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="PRF" FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+        <Button
+            x:Name="btnSaveVideo" Grid.Row="11" Grid.Column="6"
+            Background="{DynamicResource SaveVideoBtnRes}"
+            BorderThickness="0" Click="MainButton_Click" />
+        <Grid
+            Name="changeimagegrid" Grid.Row="10" Grid.Column="7"
+            Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnLastImage" Grid.Row="9" Grid.Column="1"
+                Background="Black" BorderThickness="0" Click="MainButton_Click"
+                PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="Image_PreviewMouseLeftButtonUp" TouchUp="btnGain_TouchUp">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+
+                        <Path
+                            Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center" Data="M34.666999,0.5 L68.833997,51.5 L0.50000017,51.5 z"
+                            Fill="{StaticResource ThemeForegroundColor}"
+                            RenderTransformOrigin="0.5,0.5" Stroke="Black">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform />
+                                    <RotateTransform Angle="90" />
+                                    <TranslateTransform />
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnNextImage" Grid.Row="9" Grid.Column="0"
+                Background="Black" BorderThickness="0" Click="MainButton_Click"
+                PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="Image_PreviewMouseLeftButtonUp" TouchUp="btnGain_TouchUp">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+
+                        <Path
+                            Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center" Data="M34.666999,0.5 L68.833997,51.5 L0.50000017,51.5 z"
+                            Fill="{StaticResource ThemeForegroundColor}"
+                            RenderTransformOrigin="0.5,0.5" Stroke="Black">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform />
+                                    <RotateTransform Angle="-90" />
+                                    <TranslateTransform />
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                </Grid>
+            </Button>
+        </Grid>
+        <Button
+            x:Name="btnBaseline" Grid.Row="11" Grid.Column="2"
+            Background="Black" BorderThickness="0" Click="MainButton_Click"
+            Visibility="Hidden">
+            <Grid
+                Width="{Binding ActualWidth, ElementName=btnB, Mode=OneWay}"
+                Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                    Stretch="Fill" />
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Label
+                        x:Name="lblBaseline" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="{DynamicResource BaselineTxtRes}"
+                        FontSize="24"
+                        Foreground="{StaticResource ThemeForegroundColor}" />
+                </Viewbox>
+            </Grid>
+        </Button>
+
+
+        <!--  图像视图容器  -->
+        <!--<ContentControl x:Name="viewContainer" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="8" Margin="1,1,1,1" TouchDown="Content_TouchDown" MouseDown="Content_MouseDown" MouseUp="Content_MouseUp">-->
+        <StackPanel
+            x:Name="ChangeViewerStackpanel" Grid.Row="9" Grid.Column="1"
+            Grid.ColumnSpan="6" HorizontalAlignment="Left" VerticalAlignment="Center"
+            Panel.ZIndex="10" Orientation="Horizontal" Visibility="Hidden">
+            <Button
+                x:Name="btnBViewer_Obsolete" Grid.Row="9" Grid.Column="0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="SwitchViewerButton_Click">
+                <Grid Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="21*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Content="B"
+                            FontSize="24"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnBM_Obsolete" Grid.Row="8" Grid.Column="0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="MainButton_Click">
+                <Image Source="/Resources/bm_mode.png" Stretch="Fill" />
+            </Button>
+            <Button
+                x:Name="btnColorViewer_Obsolete" Grid.Row="9" Grid.Column="0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="SwitchViewerButton_Click">
+                <Grid Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Content="Color"
+                            FontSize="24"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnPDIViewer_Obsolete" Grid.Row="9" Grid.Column="0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="SwitchViewerButton_Click">
+                <Grid Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Content="PDI"
+                            FontSize="24"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnPWViewer_PW" Grid.Row="9" Grid.Column="0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="SwitchViewerButton_Click">
+                <Grid Height="{Binding ActualHeight, ElementName=btnB, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/button_backgroud.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Content="PW"
+                            FontSize="24"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <Grid
+            x:Name="measStackpanel" Grid.Row="4" Grid.RowSpan="6"
+            Grid.Column="2" HorizontalAlignment="Center" Panel.ZIndex="10"
+            Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button
+                x:Name="btnMeasureLength" Grid.Row="0" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureLength" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource LengthMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+
+            <Button
+                x:Name="btnMeasureAngle" Grid.Row="1" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureAngle" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource AngleMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureAreaCir" Grid.Row="2" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureAreaCir" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource AreaCirMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureTrace" Grid.Row="3" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureTrace" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource TraceMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureCRL" Grid.Row="4" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureCRL" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource CRLMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureBPD" Grid.Row="5" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureBPD" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource BPDMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureGSD" Grid.Row="6" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureGSD" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource GSDMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureFL" Grid.Row="7" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureFL" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource FLMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureHC" Grid.Row="8" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureHC" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource HCMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureAC" Grid.Row="9" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureAC" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource ACMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureBPD_EFW" Grid.Row="10" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureBPD_EFW" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource BPD_EFWMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnMeasureFL_EFW" Grid.Row="11" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblMeasureFL_EFW" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource FL_EFWMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid
+            x:Name="measNoObstetricsGrid" Grid.Row="8" Grid.RowSpan="2"
+            Grid.Column="2" HorizontalAlignment="Center" Panel.ZIndex="10"
+            Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button
+                x:Name="btnNoObstetricsMeasureLength" Grid.Row="0" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblNoObstetricsMeasureLength" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource LengthMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnNoObstetricsMeasureAngle" Grid.Row="1" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblNoObstetricsMeasureAngle" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource AngleMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnNoObstetricsMeasureAreaCir" Grid.Row="2" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblNoObstetricsMeasureAreaCir" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource AreaCirMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnNoObstetricsMeasureTrace" Grid.Row="3" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasureButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblNoObstetricsMeasureTrace" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource TraceMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid
+            x:Name="measBM" Grid.Row="8" Grid.RowSpan="2"
+            Grid.Column="2" HorizontalAlignment="Center" Panel.ZIndex="10"
+            Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button
+                x:Name="btnBMMeasureLVID" Grid.Row="0" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasurePWButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblBMMeasureLVID" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="LVID"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnBMMeasureTime" Grid.Row="1" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasurePWButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblBMMeasureTime" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource BMTimeMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnBMMeasureDistance" Grid.Row="2" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasurePWButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblBMMeasureDistance" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource BMDistanceMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnBMMeasureHeartRate" Grid.Row="3" Background="MidnightBlue"
+                BorderBrush="Black" Click="MeasurePWButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblBMMeasureHeartRate" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource BMHeartrateMeasureTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid
+            x:Name="BiopsyStackpanel" Grid.Row="8" Grid.RowSpan="2"
+            Grid.Column="7" Grid.ColumnSpan="1" HorizontalAlignment="Left"
+            VerticalAlignment="Bottom" Panel.ZIndex="10" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnInPanelBiopsy" Grid.Row="0" Grid.ColumnSpan="2"
+                Background="MidnightBlue" BorderBrush="Black" Click="BiopsyButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblbInPanelBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource InPanelBiopsyTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnOutPanelBiopsy" Grid.Row="1" Grid.ColumnSpan="2"
+                Background="MidnightBlue" BorderBrush="Black" Click="BiopsyButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblOutPanelBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource OutPanelBiopsyTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnEnhanceBiopsy" Grid.Row="2" Grid.ColumnSpan="2"
+                Background="MidnightBlue" BorderBrush="Black"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                IsEnabled="False"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblEnhanceBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource EnhanceBiopsyTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnClearBiopsy" Grid.Row="3" Grid.ColumnSpan="2"
+                Background="MidnightBlue" BorderBrush="Black" Click="BiopsyButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblClearBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="{DynamicResource ClearBiopsyTxtRes}"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+
+            <Button
+                x:Name="btnHRevrtBiopsy" Grid.Row="4" Background="MidnightBlue"
+                BorderBrush="Black" Click="BiopsyButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <Label
+                            x:Name="lblHRevrtBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Content="R Я"
+                            Foreground="{StaticResource ThemeForegroundColor}" />
+                    </Viewbox>
+                </Grid>
+            </Button>
+            <Button
+                x:Name="btnVRevrtBiopsy" Grid.Row="4" Grid.Column="1"
+                Background="MidnightBlue" BorderBrush="Black" Click="BiopsyButton_Click"
+                Foreground="{StaticResource ThemeForegroundColor}"
+                Style="{StaticResource SonoptekMeasureButton}">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.RowSpan="3" Grid.ColumnSpan="3" Source="/Resources/PureBackground.png"
+                        Stretch="Fill" />
+                    <Viewbox Grid.Row="1" Grid.Column="1">
+                        <!--<Label x:Name="lblVRevrtBiopsy"   Content="R ᴚ"  Foreground="{StaticResource ThemeForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center">-->
+                        <Label
+                            x:Name="lblVRevrtBiopsy" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Foreground="{StaticResource ThemeForegroundColor}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="0,0,4,0" Text="R" />
+                                <TextBlock RenderTransformOrigin="0,0.5" Text="R">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                            <SkewTransform AngleX="0" AngleY="0" />
+                                            <RotateTransform Angle="0" />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform>
+
+                                </TextBlock>
+                            </StackPanel>
+                        </Label>
+                    </Viewbox>
+                </Grid>
+            </Button>
+
+        </Grid>
+
+
+        <Grid
+            x:Name="gridDrawer" Grid.Row="1" Grid.RowSpan="9"
+            Grid.Column="5" Grid.ColumnSpan="7" Width="15"
+            Margin="0,0,0,0" HorizontalAlignment="Right"
+            Background="{DynamicResource ThemeBackgroundColor}"
+            Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border CornerRadius="55,0,0,55" />
+            <Slider
+                x:Name="Slider1" Grid.Row="0" Width="180"
+                MinHeight="10" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider2" Grid.Row="1" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider3" Grid.Row="2" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider4" Grid.Row="3" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider5" Grid.Row="4" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider6" Grid.Row="5" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider7" Grid.Row="6" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+            <Slider
+                x:Name="Slider8" Grid.Row="7" Width="180"
+                MinHeight="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Focusable="False" Foreground="#FF80CBC4" Maximum="255"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}"
+                ValueChanged="Slider_ValueChanged" />
+
+            <Button
+                x:Name="btnReset" Grid.Row="8" Click="btnReset_Click"
+                Content="{DynamicResource ResetTxtRes}"
+                Focusable="False"
+                Style="{DynamicResource MyButton}" />
+            <Button
+                x:Name="btnDrawer" Grid.RowSpan="10" Width="17"
+                Margin="0,0,0,0"
+                Background="{DynamicResource ThemeBackgroundColor}"
+                BorderThickness="0" Click="btnDrawer_Click" Focusable="False"
+                IsEnabled="False" IsVisibleChanged="BtnDrawer_IsVisibleChanged"
+                Style="{x:Null}"
+                Visibility="Visible">
+                <Grid Width="{Binding ActualWidth, ElementName=btnDrawer, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=btnDrawer, Mode=OneWay}" Margin="0,-2">
+                    <Image Source="/Resources/blue_color_image.png" Stretch="Fill" />
+                    <Image
+                        x:Name="imageSwitch" Height="30" Source="/Resources/panel_in.png"
+                        Stretch="Fill" />
+                </Grid>
+            </Button>
+        </Grid>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <ImageBrush x:Key="FreezeBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/freeze.png" />
+    <ImageBrush x:Key="GainPBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/gain_add.png" />
+    <ImageBrush x:Key="GainNBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/gain_minus.png" />
+    <ImageBrush x:Key="MeasureBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/measure.png" />
+    <ImageBrush x:Key="AnnotateBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/annote.png" />
+    <ImageBrush x:Key="ClearBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/clear.png" />
+    <ImageBrush x:Key="SaveImageBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/save_image.png" />
+    <ImageBrush x:Key="SaveVideoBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/save_video.png" />
+    <ImageBrush x:Key="BiopsyBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/biopsy.png" />
+    <ImageBrush x:Key="PlayBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/play.png" />
+    <ImageBrush x:Key="NewGainPBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/new_gain_add.png" />
+    <ImageBrush x:Key="NewGainNBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/new_gain_minus.png" />
+    <ImageBrush x:Key="DepthBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/depth.png" />
+    <ImageBrush x:Key="FocusBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/FocusPos.png" />
+    <ImageBrush x:Key="DynamicBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/DynamicRange.png" />
+    <ImageBrush x:Key="HarmonicBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/Harmonic.png" />
+    <ImageBrush x:Key="ImageEnhanceBtnRes" ImageSource="/SmartUSKit_View;component/Resources/en-us/ImageEnhance.png" />
+
+
+
+    <system:String x:Key="FlowModeTxtRes">FlowMode</system:String>
+    <system:String x:Key="SavePatientTxtRes">Save Patient Data</system:String>
+    <system:String x:Key="ResetTxtRes">Reset</system:String>
+    <system:String x:Key="BaselineTxtRes">BaseLine</system:String>
+    <system:String x:Key="ClearBiopsyTxtRes">Clear</system:String>
+    <system:String x:Key="EnhanceBiopsyTxtRes">Enhance</system:String>
+    <system:String x:Key="OutPanelBiopsyTxtRes">Out-Plane</system:String>
+    <system:String x:Key="InPanelBiopsyTxtRes">In-Plane</system:String>
+    <system:String x:Key="CorrectAngleTxtRes">Angle</system:String>
+    <system:String x:Key="SampleVolumeTxtRes">Volume</system:String>
+    <system:String x:Key="SteerTxtRes">Steer</system:String>
+    <system:String x:Key="BMTimeMeasureTxtRes">Time</system:String>
+    <system:String x:Key="BMHeartrateMeasureTxtRes">HeartRate</system:String>
+    <system:String x:Key="BMDistanceMeasureTxtRes">Distance</system:String>
+    <system:String x:Key="VelocityMeasureTxtRes">Velocity</system:String>
+    <system:String x:Key="PWHeartrate2MeasureTxtRes">HeartRate(2)</system:String>
+    <system:String x:Key="FL_EFWMeasureTxtRes">EFW(FL)</system:String>
+    <system:String x:Key="BPD_EFWMeasureTxtRes">EFW(BPD)</system:String>
+    <system:String x:Key="ACMeasureTxtRes">GA(AC)</system:String>
+    <system:String x:Key="HCMeasureTxtRes">GA(HC)</system:String>
+    <system:String x:Key="FLMeasureTxtRes">GA(FL)</system:String>
+    <system:String x:Key="GSDMeasureTxtRes">GA(GS)</system:String>
+    <system:String x:Key="BPDMeasureTxtRes">GA(BPD)</system:String>
+    <system:String x:Key="CRLMeasureTxtRes">GA(CRL)</system:String>
+    <system:String x:Key="TraceMeasureTxtRes">Trace</system:String>
+    <system:String x:Key="AreaCirMeasureTxtRes">Area/Circumference</system:String>
+    <system:String x:Key="AngleMeasureTxtRes">Angle</system:String>
+    <system:String x:Key="LengthMeasureTxtRes">Length</system:String>
+</ResourceDictionary>

@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PropertyChanged.Fody.2.6.0\build\PropertyChanged.Fody.props" Condition="Exists('..\packages\PropertyChanged.Fody.2.6.0\build\PropertyChanged.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB35EB6E-F050-4C32-9980-C458FCE636D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SmartUSKit_CS</RootNamespace>
+    <AssemblyName>SmartUSKit_View</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>WirelessUSG</ProductName>
+    <PublisherName>WirelessUSG</PublisherName>
+    <SuiteName>WirelessUSG</SuiteName>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9137CAB9B0DDC84E46791B62C23CD61225F32D04</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SmartUSKit_CS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>APPico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ManagedWifi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\ManagedWifi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Panuon.UI.Silver, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WirelessUSG\References\Panuon.UI.Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PropertyChanged, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.2.6.0\lib\net452\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="ShaderEffectLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ShaderEffectLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartUSControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WirelessUSG\References\SmartUSControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WlanNative, Version=1.0.5485.26587, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>tools\WlanNative.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BulletCheckBox.xaml.cs">
+      <DependentUpon>BulletCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\RectConverter.cs" />
+    <Compile Include="ExtensionMethods\USProbesExtensions.cs" />
+    <Compile Include="LanguageFiles\BitmapToImagesource.cs" />
+    <Compile Include="Model\Biopsy.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\Preset.cs" />
+    <Compile Include="Model\USImage.cs" />
+    <Compile Include="Operations\OperateProbe.cs" />
+    <Compile Include="Properties\Resources.zh-TW.Designer.cs">
+      <DependentUpon>Resources.zh-TW.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.en-US.Designer.cs">
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AppInfo.cs" />
+    <Compile Include="USMainPages\UltrasoundPage.xaml.cs">
+      <DependentUpon>UltrasoundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USMainPages\UltrasoundPageGeneral.xaml.cs" />
+    <Compile Include="USTools\CountFPS.cs" />
+    <Compile Include="Converters\USImageConverter.cs" />
+    <Compile Include="USTools\SNLFileHelper.cs" />
+    <Compile Include="USTools\SystemFunctions.cs" />
+    <Compile Include="USViewers\USBMViewer.xaml.cs">
+      <DependentUpon>USBMViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USViewers\USEnhanceViewer.xaml.cs">
+      <DependentUpon>USEnhanceViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USViewers\USScaleView.cs" />
+    <Compile Include="USViewers\USViewer.cs" />
+    <Compile Include="USViewers\USViewerTools.cs" />
+    <Compile Include="USWindows\LoadingWinNoProcess.xaml.cs">
+      <DependentUpon>LoadingWinNoProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USWindows\LoadingWin.xaml.cs">
+      <DependentUpon>LoadingWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USWindows\PresetWindow.xaml.cs">
+      <DependentUpon>PresetWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USWindows\TipsWin.xaml.cs">
+      <DependentUpon>TipsWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USViewers\USGeneralView.xaml.cs">
+      <DependentUpon>USGeneralView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\BulletCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SonoptekControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-en-us.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-cn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiLanguages\USMainPages\UltrasoundPage\UltrasoundPage-zh-tw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Language\EN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Language\ZH.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\SonoptekColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\SonoptekSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USMainPages\UltrasoundPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USViewers\USBMViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="USViewers\USEnhanceViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USWindows\LoadingWinNoProcess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USWindows\LoadingWin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USWindows\PresetWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USWindows\TipsWin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="USViewers\USGeneralView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="tools\CyUSB.dll" />
+    <Content Include="tools\ManagedWifi.dll" />
+    <Content Include="tools\Newtonsoft.Json.dll" />
+    <Content Include="tools\Panuon.UI-OnlyChinese.dll" />
+    <Content Include="tools\Panuon.UI.dll" />
+    <Content Include="tools\ShaderEffectLibrary.dll" />
+    <EmbeddedResource Include="tools\WlanNative.dll" />
+    <Resource Include="Resources\zh-cn\back.png" />
+    <Resource Include="Resources\zh-tw\back.png" />
+    <EmbeddedResource Include="Properties\Resources.zh-TW.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-TW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="examination.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USBConnection.png" />
+    <None Include="Resources\注释.png" />
+    <None Include="Resources\穿刺线.png" />
+    <None Include="Resources\保存视频.png" />
+    <None Include="Resources\保存图像.png" />
+    <None Include="Resources\病例信息.png" />
+    <None Include="Resources\彩增益-.png" />
+    <None Include="Resources\彩增益+.png" />
+    <None Include="Resources\测量.png" />
+    <None Include="Resources\动态范围.png" />
+    <None Include="Resources\冻结.png" />
+    <None Include="Resources\翻转.png" />
+    <None Include="Resources\回放.png" />
+    <None Include="Resources\降噪.png" />
+    <None Include="Resources\聚焦.png" />
+    <None Include="Resources\清除.png" />
+    <None Include="Resources\设置.png" />
+    <None Include="Resources\深度.png" />
+    <None Include="Resources\谐波.png" />
+    <None Include="Resources\增益-.png" />
+    <None Include="Resources\增益+.png" />
+    <None Include="Resources\注释1.png" />
+    <None Include="Resources\穿刺线1.png" />
+    <None Include="Resources\彩增益-1.png" />
+    <None Include="Resources\彩增益+1.png" />
+    <None Include="Resources\清除1.png" />
+    <None Include="Resources\降噪1.png" />
+    <None Include="Resources\深度1.png" />
+    <None Include="Resources\动态范围1.png" />
+    <None Include="Resources\聚焦1.png" />
+    <None Include="Resources\冻结1.png" />
+    <None Include="Resources\增益-1.png" />
+    <None Include="Resources\增益+1.png" />
+    <None Include="Resources\谐波1.png" />
+    <None Include="Resources\测量1.png" />
+    <None Include="Resources\病例信息1.png" />
+    <None Include="Resources\设置1.png" />
+    <None Include="Resources\回放1.png" />
+    <None Include="Resources\保存图像1.png" />
+    <None Include="Resources\保存视频1.png" />
+    <None Include="Resources\翻转1.png" />
+    <None Include="Resources\注释2.png" />
+    <None Include="Resources\穿刺线2.png" />
+    <None Include="Resources\彩增益-2.png" />
+    <None Include="Resources\彩增益+2.png" />
+    <None Include="Resources\清除2.png" />
+    <None Include="Resources\降噪2.png" />
+    <None Include="Resources\深度2.png" />
+    <None Include="Resources\动态范围2.png" />
+    <None Include="Resources\聚焦2.png" />
+    <None Include="Resources\冻结2.png" />
+    <None Include="Resources\增益-2.png" />
+    <None Include="Resources\增益+2.png" />
+    <None Include="Resources\谐波2.png" />
+    <None Include="Resources\测量2.png" />
+    <None Include="Resources\病例信息2.png" />
+    <None Include="Resources\设置2.png" />
+    <None Include="Resources\回放2.png" />
+    <None Include="Resources\保存图像2.png" />
+    <None Include="Resources\保存视频2.png" />
+    <None Include="Resources\翻转2.png" />
+    <None Include="Resources\annote.png" />
+    <None Include="Resources\b_mode.png" />
+    <None Include="Resources\biopsy.png" />
+    <None Include="Resources\bm_mode.png" />
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\DynamicRange.png" />
+    <None Include="Resources\flip.png" />
+    <None Include="Resources\FocusPos.png" />
+    <None Include="Resources\freeze.png" />
+    <None Include="Resources\gain_add.png" />
+    <None Include="Resources\gain_minus.png" />
+    <None Include="Resources\Harmonic.png" />
+    <None Include="Resources\ImageEnhance.png" />
+    <None Include="Resources\measure.png" />
+    <None Include="Resources\new_gain_add.png" />
+    <None Include="Resources\new_gain_minus.png" />
+    <None Include="Resources\patient.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\preset.png" />
+    <None Include="Resources\save_image.png" />
+    <None Include="Resources\save_video.png" />
+    <None Include="Resources\zoom.png" />
+    <Resource Include="Resources\Minsize.png" />
+    <Resource Include="Resources\Close.png" />
+    <Resource Include="Resources\Close_black.png" />
+    <Resource Include="Resources\ResizeMark.png" />
+    <Resource Include="Resources\APPico.ico" />
+    <Resource Include="Resources\blue_color_background.png" />
+    <Resource Include="Resources\blue_color_image.png" />
+    <Resource Include="Resources\btn_add.png" />
+    <Resource Include="Resources\btn_down.png" />
+    <Resource Include="Resources\MeasureIcons\cha.png" />
+    <Resource Include="Resources\MeasureIcons\cha_liang.png" />
+    <Resource Include="Resources\MeasureIcons\mi.png" />
+    <Resource Include="Resources\MeasureIcons\mi_liang.png" />
+    <Resource Include="Resources\MeasureIcons\pp1.png" />
+    <Resource Include="Resources\MeasureIcons\pp2.png" />
+    <Resource Include="Resources\MeasureIcons\pp2h.png" />
+    <Resource Include="Resources\MeasureIcons\pp3.png" />
+    <Resource Include="Resources\MeasureIcons\pp4.png" />
+    <Resource Include="Resources\MeasureIcons\pp5.png" />
+    <Resource Include="Resources\MeasureIcons\pp5h.png" />
+    <Resource Include="Resources\MeasureIcons\pph1.png" />
+    <Resource Include="Resources\MeasureIcons\pph2.png" />
+    <Resource Include="Resources\MeasureIcons\pph3.png" />
+    <Resource Include="Resources\MeasureIcons\pph4.png" />
+    <Resource Include="Resources\MeasureIcons\shi.png" />
+    <Resource Include="Resources\MeasureIcons\shiquan.png" />
+    <Resource Include="Resources\MeasureIcons\shiquan_liang.png" />
+    <Resource Include="Resources\MeasureIcons\shi_liang.png" />
+    <Resource Include="Resources\MeasureIcons\trace.png" />
+    <Resource Include="Resources\MeasureIcons\traceh.png" />
+    <Resource Include="Resources\measure\pp1.png" />
+    <Resource Include="Resources\measure\pp2.png" />
+    <Resource Include="Resources\measure\pp2h.png" />
+    <Resource Include="Resources\measure\pp3.png" />
+    <Resource Include="Resources\measure\pp4.png" />
+    <Resource Include="Resources\measure\pp5.png" />
+    <Resource Include="Resources\measure\pp5h.png" />
+    <Resource Include="Resources\measure\pph1.png" />
+    <Resource Include="Resources\measure\pph2.png" />
+    <Resource Include="Resources\measure\pph3.png" />
+    <Resource Include="Resources\measure\pph4.png" />
+    <Resource Include="Resources\measure\十字 高亮.png" />
+    <Resource Include="Resources\measure\十字.png" />
+    <Resource Include="Resources\measure\十字圈 高亮.png" />
+    <Resource Include="Resources\measure\十字圈.png" />
+    <Resource Include="Resources\measure\叉 高亮.png" />
+    <Resource Include="Resources\measure\叉.png" />
+    <Resource Include="Resources\measure\米字 高亮.png" />
+    <Resource Include="Resources\measure\米字.png" />
+    <Resource Include="Resources\btn_left.png" />
+    <Resource Include="Resources\btn_minus.png" />
+    <Resource Include="Resources\btn_right.png" />
+    <Resource Include="Resources\btn_save.png" />
+    <Resource Include="Resources\btn_up.png" />
+    <Resource Include="Resources\button_backgroud.png" />
+    <Resource Include="Resources\del.jpg" />
+    <Resource Include="Resources\depth.png" />
+    <Resource Include="Resources\LaunchImg.png" />
+    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\logo1024%401x.png" />
+    <Resource Include="Resources\none.png" />
+    <Resource Include="Resources\panel_in.png" />
+    <Resource Include="Resources\PatientWithoutText.png" />
+    <Resource Include="Resources\PresetWithoutText.png" />
+    <Resource Include="Resources\PureBackground.png" />
+    <Resource Include="Resources\ReportWithoutText.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\sonoptek_app_icon.png" />
+    <Resource Include="Resources\transparent.png" />
+    <Resource Include="Resources\wifi_icon.png" />
+    <Resource Include="Resources\UpDownArrow.png" />
+    <Resource Include="Resources\PACS.png" />
+    <Resource Include="Resources\ResizeMarkBigger.png" />
+    <Resource Include="Resources\ResizeMarkCenter.png" />
+    <Resource Include="Splash.png" />
+    <Resource Include="Resources\zh-cn\annote.png" />
+    <Resource Include="Resources\zh-cn\biopsy.png" />
+    <Resource Include="Resources\zh-cn\clear.png" />
+    <Resource Include="Resources\zh-cn\depth.png" />
+    <Resource Include="Resources\zh-cn\DynamicRange.png" />
+    <Resource Include="Resources\zh-cn\flip.png" />
+    <Resource Include="Resources\zh-cn\FocusPos.png" />
+    <Resource Include="Resources\zh-cn\freeze.png" />
+    <Resource Include="Resources\zh-cn\gain_add.png" />
+    <Resource Include="Resources\zh-cn\gain_minus.png" />
+    <Resource Include="Resources\zh-cn\Harmonic.png" />
+    <Resource Include="Resources\zh-cn\ImageEnhance.png" />
+    <Resource Include="Resources\zh-cn\measure.png" />
+    <Resource Include="Resources\zh-cn\new_gain_add.png" />
+    <Resource Include="Resources\zh-cn\new_gain_minus.png" />
+    <Resource Include="Resources\zh-cn\patient.png" />
+    <Resource Include="Resources\zh-cn\play.png" />
+    <Resource Include="Resources\zh-cn\preset.png" />
+    <Resource Include="Resources\zh-cn\save_image.png" />
+    <Resource Include="Resources\zh-tw\annote.png" />
+    <Resource Include="Resources\zh-tw\biopsy.png" />
+    <Resource Include="Resources\zh-tw\clear.png" />
+    <Resource Include="Resources\zh-tw\depth.png" />
+    <Resource Include="Resources\zh-tw\DynamicRange.png" />
+    <Resource Include="Resources\zh-tw\flip.png" />
+    <Resource Include="Resources\zh-tw\FocusPos.png" />
+    <Resource Include="Resources\zh-tw\freeze.png" />
+    <Resource Include="Resources\zh-tw\gain_add.png" />
+    <Resource Include="Resources\zh-tw\gain_minus.png" />
+    <Resource Include="Resources\zh-tw\Harmonic.png" />
+    <Resource Include="Resources\zh-tw\ImageEnhance.png" />
+    <Resource Include="Resources\zh-tw\measure.png" />
+    <Resource Include="Resources\zh-tw\new_gain_add.png" />
+    <Resource Include="Resources\zh-tw\new_gain_minus.png" />
+    <Resource Include="Resources\zh-tw\patient.png" />
+    <Resource Include="Resources\zh-tw\play.png" />
+    <Resource Include="Resources\zh-tw\preset.png" />
+    <Resource Include="Resources\zh-tw\save_image.png" />
+    <Resource Include="Resources\zh-tw\save_video.png" />
+    <Resource Include="Resources\en-us\annote.png" />
+    <Resource Include="Resources\en-us\biopsy.png" />
+    <Resource Include="Resources\en-us\clear.png" />
+    <Resource Include="Resources\en-us\depth.png" />
+    <Resource Include="Resources\en-us\DynamicRange.png" />
+    <Resource Include="Resources\en-us\flip.png" />
+    <Resource Include="Resources\en-us\FocusPos.png" />
+    <Resource Include="Resources\en-us\freeze.png" />
+    <Resource Include="Resources\en-us\gain_add.png" />
+    <Resource Include="Resources\en-us\gain_minus.png" />
+    <Resource Include="Resources\en-us\Harmonic.png" />
+    <Resource Include="Resources\en-us\ImageEnhance.png" />
+    <Resource Include="Resources\en-us\measure.png" />
+    <Resource Include="Resources\en-us\new_gain_add.png" />
+    <Resource Include="Resources\en-us\new_gain_minus.png" />
+    <Resource Include="Resources\en-us\patient.png" />
+    <Resource Include="Resources\en-us\play.png" />
+    <Resource Include="Resources\en-us\preset.png" />
+    <Resource Include="Resources\en-us\save_image.png" />
+    <Resource Include="Resources\en-us\save_video.png" />
+    <Resource Include="Resources\zh-cn\save_video.png" />
+    <Resource Include="Resources\USCursors\AnnotateCursor.cur" />
+    <Resource Include="Resources\USCursors\NormalMeasureCursor.cur" />
+    <Resource Include="Resources\USCursors\USCursor.cur" />
+    <Content Include="Resources\ppp.cur" />
+    <Resource Include="APPico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Dlls\ESBasic.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Dlls\Oraycn.MCapture.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Dlls\Oraycn.MPlayer.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ESBasic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="tools\ffmpeg.exe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="tools\ffplay.exe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="tools\ManagedWifi.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="tools\ShaderEffectLibrary.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartUSKit\SmartUSKit.csproj">
+      <Project>{4fa55ca3-da04-43e1-8b6d-641060402bf1}</Project>
+      <Name>SmartUSKit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.4.0.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\PropertyChanged.Fody.2.6.0\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PropertyChanged.Fody.2.6.0\build\PropertyChanged.Fody.props'))" />
+  </Target>
+  <ProjectExtensions />
+  <Import Project="..\packages\Fody.4.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.0\build\Fody.targets')" />
+</Project>

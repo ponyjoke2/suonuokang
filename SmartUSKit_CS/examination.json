@@ -1,0 +1,572 @@
+{
+  "_comment": "type : EXAM_DEFAULT = 0, EXAM_MAN = 1, EXAM_ANIMAL, EXAM_USERS, 修改前记得使用格式化工具校对",
+
+  "LinearProbe": {
+    "thyroid": {
+      "type": "1",
+      "gain": "51",
+      "enhance": "3",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "3",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bc_PRF": "0",
+      "bd_PRF": "0",
+      "bd_angle": "60",
+      "index": "1"
+    },
+    "smallParts": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "bd_angle": "60",
+      "index": "2"
+    },
+    "pediatrics": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_PRF": "1",
+      "bd_angle": "60",
+      "index": "3"
+    },
+    "vascular": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_PRF": "2",
+      "bd_angle": "60",
+      "index": "4"
+    },
+    "carotid": {
+      "type": "1",
+      "gain": "59",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "bc_darkPassFilter_Gate": "80",
+      "bc_gain": "75",
+      "bc_PRF": "3",
+      "bd_PRF": "3",
+      "bd_angle": "60",
+      "index": "5"
+    },
+    "breast": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_PRF": "2",
+      "bd_angle": "60",
+      "index": "6"
+    },
+    "msk": {
+      "type": "1",
+      "gain": "66",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bc_PRF": "1",
+      "bd_PRF": "1",
+      "bd_angle": "60",
+      "index": "7"
+    },
+    "nerve": {
+      "type": "1",
+      "gain": "48",
+      "enhance": "2",
+      "dr": "40",
+      "harmonic": "1",
+      "focus": "0",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bc_PRF": "1",
+      "bd_PRF": "1",
+      "bd_angle": "60",
+      "index": "8"
+    }
+  },
+  "NotLinearProbe": {
+    "abdomen": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "0",
+      "focus": "2",
+      "index": "1"
+    },
+    "gynecology": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "0",
+      "focus": "1",
+      "index": "2"
+    },
+    "obstetric": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "focus": "1",
+      "index": "3"
+    },
+    "cardiac": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "focus": "2",
+      "index": "4"
+    },
+    "urology": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "focus": "1",
+      "index": "5"
+    },
+    "kidney": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "0",
+      "focus": "1",
+      "index": "6"
+    },
+    "lung": {
+      "type": "1",
+      "gain": "90",
+      "zoom": "0",
+      "enhance": "3",
+      "dr": "60",
+      "harmonic": "0",
+      "focus": "1",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_angle": "60",
+      "compound": "0",
+      "index": "7"
+    }
+  },
+
+  "PAProbe_NotLine": {
+    "super": "NotLinearProbe",
+
+    "abdomen": {
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "enablePA": "0"
+    },
+    "gynecology": {
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "enablePA": "0"
+    },
+    "obstetric": {
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "enablePA": "0"
+    },
+    "cardiac": {
+      "bc_WF": "10",
+      "bd_PRF": "3",
+      "focus": "3",
+      "enablePA": "1"
+    },
+    "urology": {
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "enablePA": "0"
+    },
+    "kidney": {
+      "bc_WF": "3",
+      "bd_PRF": "0",
+      "enablePA": "0"
+    }
+  },
+
+  "KX-1CT": {
+    "super": "PAProbe_NotLine",
+    "thyroid": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "7"
+    },
+    "smallParts": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "8"
+    },
+    "pediatrics": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "9"
+    },
+    "vascular": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "10"
+    },
+    "carotid": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "2",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "11"
+    },
+    "breast": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "12"
+    },
+    "msk": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "enablePA": "0",
+      "index": "13"
+    },
+    "nerve": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "bc_gain": "75",
+      "index": "14"
+    }
+  },
+
+  "SS-5CS": {
+    "super": "PAProbe_NotLine"
+  },
+  "SX-1CTA": {
+    "super": "PAProbe_NotLine"
+  },
+
+  "UX-1C": {
+    "super": "KX-1CT"
+  },
+  "UX-8CA": {
+    "super": "PAProbe_NotLine"
+  },
+
+  "UX-8CB": {
+    "super": "LinearProbe",
+
+    "vessel": {
+      "type": "1",
+      "gain": "30",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_WF": "3",
+      "bd_PRF": "3",
+      "bd_angle": "60",
+      "probeType": "Line",
+      "index": "8"
+    }
+  },
+  "UX-8PB": {
+    "super": "LinearProbe",
+
+    "vessel": {
+      "type": "1",
+      "gain": "30",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_WF": "3",
+      "bd_PRF": "3",
+      "bd_angle": "60",
+      "probeType": "Line",
+      "index": "8"
+    }
+  },
+  "PL-1C": {
+    "super": "LinearProbe",
+    "vessel": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "bc_gain": "75",
+      "index": "14"
+    }
+  },
+  "SL-5H": {
+    "super": "LinearProbe",
+    "vessel": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "bc_gain": "75",
+      "index": "14"
+    }
+  },
+  "SL-5CS": {
+    "super": "LinearProbe",
+    "vessel": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "bc_gain": "75",
+      "index": "14"
+    }
+  },
+  "UL-1H": {
+    "super": "LinearProbe",
+    "vessel": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "probeType": "Line",
+      "bc_gain": "75",
+      "index": "14"
+    }
+  },
+  "SX-8CTA": {
+    "super": "PAProbe_NotLine"
+  },
+
+  "PA-2C": {
+    "cardiac": {
+      "type": "1",
+      "gain": "80",
+      "zoom": "3",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "focus": "2",
+      "acousticalPower": "0",
+      "bc_simplify": "1",
+      "bc_darkPassFilter": "1",
+      "bc_PRF": "3",
+      "bc_WF": "10",
+      "bc_gain": "75",
+      "bd_angle": "60",
+      "bd_PRF": "3",
+      "index": "0"
+    },
+    "abdomen": {
+      "type": "1",
+      "gain": "80",
+      "zoom": "1",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "0",
+      "focus": "2",
+      "acousticalPower": "1",
+      "bc_simplify": "0",
+      "bc_darkPassFilter": "0",
+      "bc_PRF": "0",
+      "bc_WF": "3",
+      "bc_gain": "75",
+      "bd_angle": "60",
+      "bd_PRF": "0",
+      "index": "1"
+    }
+  },
+
+  "UL-1E": {
+    "super": "LinearProbe",
+
+    "vessel": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "1",
+      "bc_WF": "3",
+      "bd_PRF": "3",
+      "probeType": "Line",
+      "index": "8"
+    }
+  },
+
+  "UX-8PA": {
+    "cardiac": {
+      "type": "1",
+      "gain": "80",
+      "zoom": "3",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic_N": "1",
+      "focus": "2",
+      "acousticalPower": "0",
+      "bc_simplify": "1",
+      "bc_darkPassFilter": "1",
+      "bc_WF": "10",
+      "bc_PRF_N": "3",
+      "bc_gain": "75",
+      "bd_angle": "60",
+      "bd_PRF": "3",
+      "enablePA": "1",
+      "bc_enablePA": "1",
+      "bd_enablePA": "1",
+      "index": "0"
+    },
+    "abdomen": {
+      "type": "1",
+      "gain": "80",
+      "zoom": "1",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic_N": "0",
+      "focus": "2",
+      "acousticalPower": "1",
+      "bc_simplify": "0",
+      "bc_darkPassFilter": "0",
+      "bc_WF": "3",
+      "bc_PRF_N": "0",
+      "bc_gain": "75",
+      "bd_angle": "60",
+      "bd_PRF": "1",
+      "enablePA": "0",
+      "bc_enablePA": "0",
+      "bd_enablePA": "0",
+      "index": "1"
+    }
+
+  },
+
+  "UX-2DA": {
+    "linear": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "3",
+      "dr": "70",
+      "harmonic": "1",
+      "focus": "3",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_angle": "60",
+      "index": "1"
+    }
+  },
+
+  "UX-2DB": {
+    "convex": {
+      "type": "1",
+      "gain": "80",
+      "enhance": "2",
+      "dr": "80",
+      "harmonic": "1",
+      "bc_harmonic": "0",
+      "focus": "3",
+      "bc_gain": "75",
+      "bc_WF": "3",
+      "bd_angle": "60",
+      "index": "1"
+    }
+  },
+
+  "SX-1CTSA": {
+    "super": "PAProbe_NotLine"
+  },
+
+
+  "SX-8CXA": {
+    "super": "PAProbe_NotLine"
+  },
+
+  "TEST": {
+    "super": "LinearProbe",
+
+    "thyroid": {
+      "gain_N": "81"
+    }
+  },
+
+  "_end": "end"
+}
