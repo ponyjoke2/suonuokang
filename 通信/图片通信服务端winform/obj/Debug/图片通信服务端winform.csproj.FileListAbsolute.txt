@@ -18,3 +18,13 @@ E:\SHENZHEN\通信\图片通信服务端winform\obj\Debug\图片通信服务端w
 E:\SHENZHEN\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.csproj.CoreCompileInputs.cache
 E:\SHENZHEN\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.exe
 E:\SHENZHEN\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.pdb
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\bin\Debug\图片通信服务端winform.exe.config
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\bin\Debug\图片通信服务端winform.exe
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\bin\Debug\图片通信服务端winform.pdb
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.csproj.AssemblyReference.cache
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.Form1.resources
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.Properties.Resources.resources
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.csproj.GenerateResource.cache
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.csproj.CoreCompileInputs.cache
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.exe
+E:\SHENZHEN\索诺康UL3C第二版\通信\图片通信服务端winform\obj\Debug\图片通信服务端winform.pdb

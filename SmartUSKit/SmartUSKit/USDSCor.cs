@@ -198,16 +198,19 @@ namespace SmartUSKit.SmartUSKit
             DateTime beforeDT = System.DateTime.Now;
             try
             {
-                vesselAbscissa = Execute2(pixels, width, height);
-                //Console.WriteLine("血管横向偏移：" + string.Format("{0:N2}", vesselAbscissa));
+                float vesselAbscissaTemp = Execute2(pixels, width, height);
+                
 
-                if (vesselAbscissa > -2 && vesselAbscissa < 2)
+                if (vesselAbscissaTemp > -2 && vesselAbscissaTemp < 2)
                 {
                     //创建委托，指定任务
                     Func<string, string> showMessage1 = ShowMessage;
                     //耗时操作异步回调函数中执行
                     showMessage1.BeginInvoke("：这是一个委托任务的输入参数", new AsyncCallback((result) =>
                     {
+                        vesselAbscissa = vesselAbscissaTemp;
+                        //Console.WriteLine("血管横向偏移：" + string.Format("{0:N2}", vesselAbscissa));
+
                         vesselDepth = Execute1(pixels, width, height, test);
                         //Console.WriteLine("血管深度：" + string.Format("{0:N2}", vesselDepth));
 
@@ -223,6 +226,7 @@ namespace SmartUSKit.SmartUSKit
                 }
                 else
                 {
+                    vesselAbscissa = -5;
                     vesselDepth = -5;
                     vesselLWratio = -5;
                     vesselArea = -5;
@@ -238,10 +242,11 @@ namespace SmartUSKit.SmartUSKit
                     String strDepth = vesselDepth.ToString();
                     String strWHR = vesselLWratio.ToString();
                     String strArea = vesselArea.ToString();
-                    String strAll = strDepth + "#" + strWHR + "#" + strArea;
+                    String strAbscissa = vesselAbscissa.ToString();
+                    String strAll = strDepth + "#" + strWHR + "#" + strArea + "#" + strAbscissa;
                     byte[] msgAll = Encoding.UTF8.GetBytes(strAll);
                     socketSendAll.Send(msgAll);
-                    //传输图片
+                    
                     rowPixel = (int)(vesselDepth * 22);
                     colPixel = (int)(vesselAbscissa * 23 + width / 2);
                     if (rowPixel > 5 && colPixel > 5)
@@ -274,6 +279,7 @@ namespace SmartUSKit.SmartUSKit
                         }
 
                     }
+                    //传输图片
                     Array.Copy(widthMsg, 0, imageMsg, 0, widthMsg.Length);
                     Array.Copy(heightMsg, 0, imageMsg, widthMsg.Length, heightMsg.Length);
                     Array.Copy(pixels, 0, imageMsg, widthMsg.Length + heightMsg.Length, pixels.Length);

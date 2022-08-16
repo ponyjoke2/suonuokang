@@ -222,6 +222,7 @@ namespace 图片通信服务端winform
                             textBox1.Text = "请正确贴合";
                             textBox2.Text = "请正确贴合";
                             textBox3.Text = "请正确贴合";
+                            textBox4.Text = "请正确贴合";
                         });
                     }
                     else
@@ -250,6 +251,14 @@ namespace 图片通信服务端winform
                             else
                             {
                                 textBox3.Text = stringArray[2];
+                            }
+                            if (stringArray[3].Length > 5)
+                            {
+                                textBox4.Text = stringArray[3].Substring(0, 5);
+                            }
+                            else
+                            {
+                                textBox4.Text = stringArray[3];
                             }
                         });
                     }
